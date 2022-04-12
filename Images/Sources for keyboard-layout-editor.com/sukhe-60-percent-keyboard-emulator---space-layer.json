@@ -1,0 +1,401 @@
+[
+  {
+    "name": "Sukhe 60 percent keyboard emulator - Space layer",
+    "author": "Oleg Sukhonos"
+  },
+  [
+    {
+      "c": "#e1e376",
+      "fa": [
+        0,
+        0,
+        6,
+        6
+      ]
+    },
+    "~\nº\nʻ\nʼ\n\n\n`\n\n\nª",
+    {
+      "c": "#B2AA7E",
+      "fa": [
+        0,
+        0,
+        6,
+        2
+      ]
+    },
+    "!\n1\n\nF1",
+    "@\n2\n\nF2",
+    "#\n3\n\nF3",
+    "$\n4\n\nF4",
+    "%\n5\n\nF5",
+    "^\n6\n\nF6",
+    "&\n7\n\nF7",
+    "*\n8\n\nF8",
+    "(\n9\n\nF9",
+    ")\n0\n\nF10",
+    "_\n-\n\nF11",
+    "+\n=\n\nF12",
+    {
+      "c": "#e087d7",
+      "w": 2
+    },
+    "Backspace\n\n\nPrintScreen"
+  ],
+  [
+    {
+      "c": "#cccccc",
+      "w": 1.5
+    },
+    "Tab",
+    {
+      "c": "#e1e376",
+      "fa": [
+        0,
+        0,
+        6
+      ]
+    },
+    "Q\n‼\n‹\n{\n\n\n\n\n\n⁈",
+    "W\n\n›\n}",
+    {
+      "fa": [
+        0,
+        0,
+        8,
+        4
+      ]
+    },
+    "E\n\n‚\n_\n\n\n\n\n\n€",
+    {
+      "fa": [
+        0,
+        0,
+        8,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "R\n®\n‘\n!\n※\n\n\n\n\nFIG‒",
+    "T\n™\n’\nNB‑\n\n\n\n\n\n­­SFT-",
+    {
+      "fa": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ]
+    },
+    "Y\n3M–\nHB–\nN–\n\n\n\n\n\n2M–",
+    {
+      "c": "#6BD089",
+      "fa": [
+        0,
+        1,
+        1,
+        2
+      ]
+    },
+    "U\n\n\nHome",
+    {
+      "f": 3
+    },
+    "I\n\n\n▲",
+    {
+      "f": 3
+    },
+    "O\n\n\nEnd",
+    {
+      "f": 3
+    },
+    "P\n\n\nPgUp",
+    {
+      "c": "#e087d7",
+      "fa": [
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    "{\n[\n\nIns",
+    "}\n]\n\nScroll Lock",
+    {
+      "w": 1.5
+    },
+    "|\n\\\n\nBreak"
+  ],
+  [
+    {
+      "c": "#cccccc",
+      "t": "#000000\n\n\n#ff0000",
+      "f": 3,
+      "w": 1.75
+    },
+    "CapsLock\n\n\nEsc",
+    {
+      "c": "#e1e376",
+      "t": "#000000",
+      "fa": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5
+      ]
+    },
+    "A\n⁂\n«\n(\n\n\n\n\n\n∗",
+    {
+      "fa": [
+        0,
+        0,
+        6
+      ]
+    },
+    "S\n¶\n»\n)\n®\n\n\n\n\n§",
+    {
+      "fa": [
+        0,
+        6,
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ]
+    },
+    "D\n·\n„\n[\n\n\n\n\n\n〃",
+    {
+      "fa": [
+        0,
+        0,
+        6
+      ]
+    },
+    "F\n⁕\n“\n]\n\n\n\n\n\nƒ",
+    {
+      "fa": [
+        0,
+        0,
+        6,
+        1
+      ]
+    },
+    "G\n‡\n”\nM—\n\n\n\n\n\n†",
+    {
+      "c": "#ebb323",
+      "fa": [
+        0,
+        0,
+        6,
+        2
+      ]
+    },
+    "H\n\n\nEnter",
+    {
+      "c": "#6BD089",
+      "f": 3,
+      "n": true
+    },
+    "J\n\n\n◄",
+    {
+      "f": 3
+    },
+    "K\n\n\n▼",
+    {
+      "f": 3
+    },
+    "L\n\n\n►",
+    {
+      "f": 3
+    },
+    ":\n;\n\nPgDn",
+    {
+      "c": "#ebb323",
+      "f": 3
+    },
+    "\"\n'\n\nEsc",
+    {
+      "c": "#cccccc",
+      "w": 2.25
+    },
+    "Enter"
+  ],
+  [
+    {
+      "c": "#aaaaaa",
+      "t": "#000000\n\n\n#0000ff",
+      "f": 3,
+      "w": 2.25
+    },
+    "Shift\n\n\nThin",
+    {
+      "c": "#eb6a80",
+      "t": "#000000",
+      "fa": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "Z\n\nRedo\nUndo\n\n\n\n\n\n°",
+    {
+      "c": "#94D8F6",
+      "fa": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "X\n\n✗\n<i class='fa fa-volume-off'></i>\n<i class='fa fa-play'></i><i class='fa fa-pause'></i>\n\n\n\n☒\n′",
+    "C\n©\n¢\n<i class='fa fa-volume-down'></i>\n<i class='fa fa-backward'></i>\n\n\n\n\n″",
+    "V\n\n✓\n<i class='fa fa-volume-up'></i>\n<i class='fa fa-forward'></i>\n\n\n\n☑\n‴",
+    {
+      "c": "#eb6a80",
+      "fa": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "B\n⁃\n•\nSel All\n‣\n\n\n\n☐\n◦",
+    {
+      "fa": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        2
+      ]
+    },
+    "N\n¬\nLnCp\nCopy\n♪\n\n\n\n\n№",
+    {
+      "c": "#ebb323",
+      "fa": [
+        0,
+        0,
+        1,
+        2
+      ]
+    },
+    "M\n\n\nBacksp",
+    "<\n,\n\nDel",
+    {
+      "c": "#eb6a80",
+      "fa": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        5
+      ]
+    },
+    ">\n⁝\nLnCut\nCut\n․\n\n.\n\n\n…",
+    {
+      "fa": [
+        0,
+        0,
+        1,
+        1
+      ]
+    },
+    "?\n¡\nLnDup\nPaste\n\n\n/\n\n\n¿",
+    {
+      "c": "#cccccc",
+      "w": 2.75
+    },
+    "Shift"
+  ],
+  [
+    {
+      "c": "#aaaaaa",
+      "t": "#000000\n\n\n#0000ff",
+      "fa": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "w": 1.25
+    },
+    "Ctrl\n\n\nZero",
+    {
+      "c": "#cccccc",
+      "t": "#000000",
+      "w": 1.25
+    },
+    "Win",
+    {
+      "c": "#aaaaaa",
+      "t": "#000000\n\n\n#0000ff",
+      "w": 1.25
+    },
+    "Alt\n\n\nNB",
+    {
+      "c": "#777777",
+      "t": "#FFFFFF",
+      "a": 7,
+      "w": 6.25
+    },
+    "Space",
+    {
+      "c": "#cccccc",
+      "t": "#000000",
+      "a": 4,
+      "w": 1.25
+    },
+    "Alt",
+    {
+      "c": "#e087d7",
+      "w": 1.25
+    },
+    "Win\n\n\nNumLock",
+    {
+      "c": "#cccccc",
+      "w": 1.25
+    },
+    "Menu",
+    {
+      "w": 1.25
+    },
+    "Ctrl"
+  ]
+]

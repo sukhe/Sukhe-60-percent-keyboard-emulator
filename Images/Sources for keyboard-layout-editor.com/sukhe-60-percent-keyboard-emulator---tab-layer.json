@@ -1,0 +1,209 @@
+[
+  {
+    "name": "Sukhe 60 percent keyboard emulator - Tab layer",
+    "author": "Oleg Sukhonos"
+  },
+  [
+    "~\n`",
+    {
+      "c": "#4fcce3"
+    },
+    "!\n1\n¹\n⅟\n\n\n\n\n\n₁",
+    "@\n2\n²\n\n\n\n\n\n\n₂",
+    "#\n3\n³\n\n\n\n\n\n\n₃",
+    "$\n4\n⁴\n\n\n\n\n\n\n₄",
+    "%\n5\n⁵\n\n\n\n\n\n\n₅",
+    "^\n6\n⁶\n\n\n\n\n\n\n₆",
+    "&\n7\n⁷\n\n\n\n\n\n\n₇",
+    "*\n8\n⁸\n\n\n\n\n\n\n₈",
+    "(\n9\n⁹\n\n\n\n\n\n\n₉",
+    ")\n0\n⁰\n\n\n\n\n\n\n₀",
+    "_\n-\n⁻\n\n\n\n\n\n\n₋",
+    "+\n=\n⁼\n\n\n\n\n\n\n₌",
+    {
+      "c": "#cccccc",
+      "w": 2
+    },
+    "Backspace"
+  ],
+  [
+    {
+      "c": "#777777",
+      "t": "#ffffff",
+      "w": 1.5
+    },
+    "Tab",
+    {
+      "c": "#B2AA7E",
+      "t": "#000000"
+    },
+    "Q\n\nØ\nø",
+    {
+      "c": "#cccccc"
+    },
+    "W",
+    {
+      "c": "#B2AA7E"
+    },
+    "E\n\nŒ\nœ",
+    {
+      "c": "#cccccc"
+    },
+    "R",
+    {
+      "c": "#B2AA7E"
+    },
+    "T\n\nÞ\nþ",
+    {
+      "c": "#cccccc"
+    },
+    "Y",
+    {
+      "c": "#e1e376"
+    },
+    "U\n\n\nF1",
+    "I\n\n\nF2",
+    "O\n\n\nF3",
+    "P\n\n\nF4",
+    {
+      "c": "#eb6a80",
+      "fa": [
+        0,
+        0,
+        0,
+        2
+      ]
+    },
+    "{\n[\n⁽\nPaste\n\n\n\n\n\n₍",
+    "}\n]\n⁾\nCut\n\n\n\n\n\n₎",
+    {
+      "c": "#4fcce3",
+      "w": 1.5
+    },
+    "|\n\\\n⁺\n⁄\n\n\n\n\n\n₊"
+  ],
+  [
+    {
+      "c": "#cccccc",
+      "w": 1.75
+    },
+    "Caps Lock",
+    {
+      "c": "#B2AA7E"
+    },
+    "A\n\nÆ\næ",
+    "S\n\nẞ\nß\n\n\n\n\n\nſ",
+    "D\n\nÐ\nð",
+    {
+      "c": "#cccccc"
+    },
+    "F",
+    "G",
+    "H",
+    {
+      "c": "#e1e376",
+      "n": true
+    },
+    "J\n\n\nF5",
+    "K\n\n\nF6",
+    "L\n\n\nF7",
+    ":\n;\n\nF8",
+    {
+      "c": "#eb6a80"
+    },
+    "\"\n'\n\nCopy",
+    {
+      "c": "#cccccc",
+      "w": 2.25
+    },
+    "Enter"
+  ],
+  [
+    {
+      "w": 2.25
+    },
+    "Shift",
+    {
+      "c": "#B2AA7E",
+      "f": 3
+    },
+    "Z\n\nƷ\nʒ",
+    {
+      "c": "#cccccc"
+    },
+    "X",
+    {
+      "c": "#B2AA7E",
+      "f": 3
+    },
+    "C\n\nƏ\nə",
+    {
+      "c": "#cccccc"
+    },
+    "V",
+    "B",
+    {
+      "c": "#B2AA7E",
+      "f": 3
+    },
+    "N\n\nŊ\nŋ",
+    {
+      "c": "#e1e376",
+      "f": 3
+    },
+    "M\n\n\nF9",
+    {
+      "f": 3
+    },
+    "<\n,\n\nF10",
+    {
+      "f": 3
+    },
+    ">\n.\n\nF11",
+    {
+      "f": 3
+    },
+    "?\n/\n\nF12",
+    {
+      "c": "#cccccc",
+      "w": 2.75
+    },
+    "Shift"
+  ],
+  [
+    {
+      "w": 1.25
+    },
+    "Ctrl",
+    {
+      "w": 1.25
+    },
+    "Win",
+    {
+      "w": 1.25
+    },
+    "Alt",
+    {
+      "a": 7,
+      "w": 6.25
+    },
+    "",
+    {
+      "a": 4,
+      "w": 1.25
+    },
+    "Alt",
+    {
+      "w": 1.25
+    },
+    "Win",
+    {
+      "w": 1.25
+    },
+    "Menu",
+    {
+      "w": 1.25
+    },
+    "Ctrl"
+  ]
+]

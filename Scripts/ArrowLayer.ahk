@@ -1,0 +1,265 @@
+﻿farr(x) {
+	global ArrowLayer
+	fsend(x)
+	ArrowLayer := false
+}
+
+#If ((ArrowLayer or ArrowLayerLock) and (!GetKeyState("Space", "P")))
+
++!1::farr("{U+2665}")	; ♥ Black Heart Suit
++!2::farr("{U+2666}")	; ♦ Black Diamond Suit
++!3::farr("{U+2663}")	; ♣ Black Club Suit
++!4::farr("{U+2660}")	; ♠ Black Spade Suit
+
+!1::farr("{U+2661}")	; ♡ White Heart Suit
+!2::farr("{U+2662}")	; ♢ White Diamond Suit
+!3::farr("{U+2667}")	; ♧ White Club Suit
+!4::farr("{U+2664}")	; ♤ White Spade Suit
+
+; Manicule
+1::farr("{U+1F448}")	; 👈 White Left Pointing Backhand Index
+2::farr("{U+1F449}")	; 👉 White Right Pointing Backhand Index
+3::farr("{U+261D}")	; ☝ White Up Pointing Index
+4::farr("{U+1F447}")	; 👇 White Down Pointing Backhand Index
+
+^+5::farr("{U+263A}")	; ☺ White Smiling Face
+^5::farr("{U+1F606}")	; 😆 Smiling Face with Open Mouth and Tightly-Closed Eyes
+!+5::farr("{U+1F602}")	; 😂 Face with Tears of Joy
+!5::farr("{U+1F923}")	; 🤣 Rolling On The Floor Laughing
++5::farr("{U+1F604}")	; 😄 Smiling Face with Open Mouth and Smiling Eyes
+5::farr("{U+1F642}")	; 🙂 Slightly Smiling Face
+
+!+6::farr("{U+1F917}")	; 🤗 Hugging Face
+^6::farr("{U+1F601}")	; 😁 Grinning Face with Smiling Eyes
+!6::farr("{U+1F600}")	; 😀 Grinning Face
++6::farr("{U+1F61C}")	; 😜 Face with Stuck-Out Tongue and Winking Eye
+6::farr("{U+1F609}")	; 😉 Winking Face
+
+!+7::farr("{U+1F607}")	; 😇 Smiling Face with Halo
+!7::farr("{U+1F60E}")	; 😎 Smiling Face with Sunglasses
+^7::farr("{U+1F618}")	; 😘 Face Throwing a Kiss
++7::farr("{U+1F970}")	; 🥰 Smiling Face with Smiling Eyes and Three Hearts
+7::farr("{U+1F60D}")	; 😍 Smiling Face with Heart-Shaped Eyes
+
+!+8::farr("{U+1F612}")	; 😒 Unamused Face
+!8::farr("{U+1F914}")	; 🤔 Thinking Face
+^8::farr("{U+1F644}")	; 🙄 Face With Rolling Eyes
++8::farr("{U+1F928}")	; 🤨 Face With One Eyebrow Raised
+8::farr("{U+1F610}")	; 😐 Neutral Face
+
+!+9::farr("{U+1F92B}") 	; 🤫 Face With Finger Covering Closed Lips
+!9::farr("{U+1F910}")	; 🤐 Zipper-Mouth Face
+^9::farr("{U+1F92E}") 	; 🤮 Face With Open Mouth Vomiting
++9::farr("{U+1F60C}") 	; 😌 Relieved Face
+9::farr("{U+1F971}") 	; 🥱 Yawning Face
+
+^+0::farr("{U+2639}")	; ☹ White Frowning Face
+^0::farr("{U+1F631}")	; 😱 Face Screaming In Fear
+!+0::farr("{U+1F92F}")	; 🤯 Shocked Face With Exploding Head
+!0::farr("{U+1F632}")	; 😲 Astonished Face
++0::farr("{U+1F97A}")	; 🥺 Face with Pleading Eyes
+0::farr("{U+1F641}")	; 🙁 Slightly Frowning Face
+
+
+!+sc00C::farr("{U+1F629}")	; 😩 Weary Face
+^sc00C::farr("{U+1F62D}")	; 😭 Loudly Crying Face
+!sc00C::farr("{U+1F622}")	; 😢 Crying Face
++sc00C::farr("{U+1F92C}")	; 🤬 Serious Face With Symbols Covering Mouth
+sc00C::farr("{U+1F621}")	; 😡 Pouting Face
+
+!+sc029::farr("{U+1F4A9}")	;💩 Pile of Poo
+^sc029::farr("{U+1F47D}")	; 👽 Extraterrestrial Alien
+!sc029::farr("{U+1F916}")	; 🤖 Robot Face
++sc029::farr("{U+1F921}")	; 🤡 Clown Face
+sc029::farr("{U+1F480}")	; 💀 Skull
+
+^a::farr("{U+1F878}")	; 🡸 Wide-Headed Leftwards Heavy Barb Arrow
+^w::farr("{U+1F879}")	; 🡹 Wide-Headed Upwards Heavy Barb Arrow
+^d::farr("{U+1F87A}")	; 🡺 Wide-Headed Rightwards Heavy Barb Arrow
+^x::farr("{U+1F87B}")	; 🡻 Wide-Headed Downwards Heavy Barb Arrow
+^q::farr("{U+1F87C}")	; 🡼 Wide-Headed North West Heavy Barb Arrow
+^e::farr("{U+1F87D}")	; 🡽 Wide-Headed North East Heavy Barb Arrow
+^c::farr("{U+1F87E}")	; 🡾 Wide-Headed South East Heavy Barb Arrow
+^z::farr("{U+1F87F}")	; 🡿 Wide-Headed South West Heavy Barb Arrow
+
+!+q::farr("{U+2BB6}")	; ⮶
+!+e::farr("{U+2BB2}")	; ⮲
+!+c::farr("{U+2BB5}")	; ⮵
+!+z::farr("{U+2BB1}")	; ⮱
+
+!+w::farr("{U+2BB4}")	; ⮴
+!+d::farr("{U+2BB3}")	; ⮳
+!+x::farr("{U+2BB7}")	; ⮷
+!+a::farr("{U+2BB0}")	; ⮰
+
+!q::farr("{U+2BAE}")	; ⮮
+!e::farr("{U+2BAA}")	; ⮪
+!c::farr("{U+2BAD}")	; ⮭
+!z::farr("{U+2BA9}")	; ⮩
+
+!w::farr("{U+2BAC}")	; ⮬
+!d::farr("{U+2BAB}")	; ⮫
+!x::farr("{U+2BAF}")	; ⮯
+!a::farr("{U+2BA8}")	; ⮨
+
++a::farr("{U+1F844}")	; 🡄
++w::farr("{U+1F845}")	; 🡅
++d::farr("{U+1F846}")	; 🡆
++x::farr("{U+1F847}")	; 🡇
+
++q::farr("{U+2BA6}")	; ⮦
++e::farr("{U+2BA2}")	; ⮢
++c::farr("{U+2BA5}")	; ⮥
++z::farr("{U+2BA1}")	; ⮡
+
+q::farr("{U+2BA3}")	; ⮣
+e::farr("{U+2BA7}")	; ⮧
+c::farr("{U+2BA0}")	; ⮠
+z::farr("{U+2BA4}")	; ⮤
+
+w::farr("{U+2B8F}")	; ⮏
+d::farr("{U+2B8C}")	; ⮌
+x::farr("{U+2B8D}")	; ⮍
+a::farr("{U+2B8E}")	; ⮎
+
+^s::fsend("{U+2199}")	; ↙ South West Arrow
+!s::fsend("{U+2196}")	; ↖ North West Arrow
++s::fsend("{U+2197}")	; ↗ North East Arrow
+s::fsend("{U+2198}")	; ↘ South East Arrow
+
+!+u::farr("{U+1F386}")	; 🎆 Fireworks
+!u::farr("{U+1F389}")	; 🎉 Party Popper
+^u::farr("{U+1F37E}")	; 🍾 Bottle with Popping Cork
++u::farr("{U+1F382}")	; 🎂 Birthday Cake
+u::farr("{U+1F381}")	; 🎁 Wrapped Present
+
+!+i::farr("{U+1F937}")	; 🤷 Shrug
+^i::farr("{U+1F44A}")	; 👊 Fisted Hand Sign
+!i::farr("{U+270A}")	; ✊ Raised Fist
++i::farr("{U+270C}")	; ✌ Victory Hand
+i::farr("{U+1F4AA}")	; 💪 Flexed Biceps
+
+!+p::farr("{U+1F645}")	; 🙅 Face With No Good Gesture
+!p::farr("{U+1F64F}")	; 🙏 Person with Folded Hands
+^p::farr("{U+1F926}")	; 🤦 Face Palm
++p::farr("{U+1F595}")	; 🖕 Reversed Hand with Middle Finger Extended
+p::farr("{U+1F44E}")	; 👎 Thumbs Down Sign
+
+!+o::farr("{U+1F646}")	; 🙆 Face With Ok Gesture
+^o::farr("{U+1F91D}")	; 🤝 Handshake
+!o::farr("{U+1F44F}")	; 👏 Clapping Hands Sign
++o::farr("{U+1F44C}")	; 👌 Ok Hand Sign
+o::farr("{U+1F44D}")	; 👍 Thumbs Up Sign
+
+; hearts
+!+h::farr("{U+1F48C}")	; 💌 Love Letter
+!h::farr("{U+1F495}")	; 💕 Two Hearts
+^h::farr("{U+1F49D}")	; 💝 Heart with Ribbon
++h::farr("{U+1F494}")	; 💔 Broken Heart
+h::farr("{U+1F498}")	; 💘 Heart with Arrow
+
+; male
+!+m::farr("{U+1F935}")	; 🤵 Man In Tuxedo
+^m::farr("{U+2642}")	; ♂️ Male Sign
+!m::farr("{U+1F474}")	; 👴 Older Man
++m::farr("{U+1F468}")	; 👨 Man
+m::farr("{U+1F466}")	; 👦 Boy
+
+; female
+!+f::farr("{U+1F470}")	; 👰 Bride with Veil
+^f::farr("{U+2640}")	; ♀ Female Sign
+!f::farr("{U+1F475}")	; 👵 Older Woman
++f::farr("{U+1F469}")	; 👩 Woman
+f::farr("{U+1F467}")	; 👧 Girl
+
+; gender neutral
+^g::farr("{U+1F476}")	; 👶 Baby
+!g::farr("{U+1F9D3}")	; 🧓 Older Adult
++g::farr("{U+1F9D1}")	; 🧑 Adult
+g::farr("{U+1F9D2}")	; 🧒 Child
+
+; beverage / beer
+!+b::farr("{U+1F379}")	; 🍹 Tropical Drink
+^b::farr("{U+1F377}")	; 🍷 Wine Glass
+!b::farr("{U+1F37A}")	; 🍺 Beer Mug
++b::farr("{U+1F964}")	; 🥤 Cup With Straw
+b::farr("{U+2615}")	; ☕ Hot Beverage
+
+; fastfood
+!+v::farr("{U+1F37F}")	; 🍿 Popcorn
+^v::farr("{U+1F369}")	; 🍩 Doughnut
+!v::farr("{U+1F354}")	; 🍔 Hamburger
++v::farr("{U+1F32D}")	; 🌭 Hot Dog
+v::farr("{U+1F355}")	; 🍕 Slice of Pizza
+
+!+n::farr("{U+1F957}")	; 🥗 Green Salad
+^n::farr("{U+1F35D}")	; 🍝 Spaghetti
+!n::farr("{U+1F372}")	; 🍲 Pot of Food
++n::farr("{U+1F373}")	; 🍳 Cooking
+n::farr("{U+1F37D}")	; 🍽 Fork and Knife with Plate
+
+!+j::farr("{U+1F9C1}")	; 🧁 Cupcake
+^j::farr("{U+1F370}")	; 🍰 Shortcake
+!j::farr("{U+1F950}")	; 🥐 Croissant
++j::farr("{U+1F36D}")	; 🍭 Lollipop
+j::farr("{U+1F368}")	; 🍨 Ice Cream
+
+!+k::farr("{U+1F352}")	; 🍒 Cherries
+^k::farr("{U+1F388}")	; 🎈 Balloon
+!k::farr("{U+2728}")	; ✨ Sparkles
++k::farr("{U+1F339}")	; 🌹 Rose
+k::farr("{U+1F48B}")	; 💋 Kiss Mark
+
+!+sc02B::farr("{U+1F4B0}")	; 💰 Money Bag
+!sc02B::farr("{U+1F4B2}")	; 💲 Heavy Dollar Sign
++sc02B::farr("{U+1F4C8}")	; 📈 Chart with Upwards Trend
+^sc02B::farr("{U+1F4C9}")	; 📉 Chart with Downwards Trend
+sc02B::farr("{U+1F4C5}")	; 📅 Calendar
+
+!+Backspace::farr("{U+1F3C6}")	; 🏆 Trophy
++Backspace::farr("{U+1F947}")	; 🥇 First Place Medal
+!Backspace::farr("{U+1F948}")	; 🥈 Second Place Medal
+^Backspace::farr("{U+1F949}")	; 🥉 Third Place Medal
+Backspace::farr("{U+1F396}")	; 🎖 Military Medal
+
+!+sc01A::farr("{U+1F500}")	; 🔀️ Shuffle
+!sc01A::farr("{U+23EE}")	; ⏮	Skip to the start or previous file/track/chapter
+^sc01A::farr("{U+23ED}")	; ⏭	Skip to the end or next file/track/chapter
++sc01A::farr("{U+23EA}")	; ⏪	Back (Fast Backwards)
+sc01A::farr("{U+23E9}")	; ⏩	Fast forward
+
+!+sc01B::farr("{U+23FA}")	; ⏺	Record
+!sc01B::farr("{U+23CF}")	; ⏏	Eject
+^sc01B::farr("{U+23F9}")	; ⏹	Stop
++sc01B::farr("{U+23F8}")	; ⏸	Pause
+sc01B::farr("{U+23EF}")	; ⏯	Play/Pause toggle
+
+!+r::farr("{U+2625}")	; ☥ Ankh
+!r::farr("{U+262A}")	; ☪ Star and Crescent
+^r::farr("{U+2721}")	; ✡ Star of David
++r::farr("{U+2626}")	; ☦ Orthodox Cross
+r::farr("{U+271D}")	; ✝ Latin Cross
+
+!+t::farr("{U+1F6A7}")	; 🚧 Construction Sign
+!t::farr("{U+1F6A8}")	; 🚨 Police Cars Revolving Light
+^t::farr("{U+2708}")	; ✈ Airplane
++t::farr("{U+1F68C}")	; 🚌 Bus
+t::farr("{U+1F697}")	; 🚗 Automobile
+
+!+sc035::farr("{U+2049}")	; ⁉ Exclamation Question Mark
+!sc035::farr("{U+2755}")	; ❕ White Exclamation Mark Ornament
++sc035::farr("{U+2757}")	; ❗ Heavy Exclamation Mark Symbol
+^sc035::farr("{U+2754}")	; ❔ White Question Mark Ornament
+sc035::farr("{U+2753}")	; ❓ Black Question Mark Ornament
+
+#If
+
+
+/*
+
+http://www.keyboard-layout-editor.com/##@@_c=#a0cca0&fa@:0&:0&:2&:2&:0&:0&:0&:0&:2&:2&:2;;&=~%0A%60%0A%F0%9F%A4%93%0A%F0%9F%92%80%0A%0A%0A%0A%0A%F0%9F%A4%96%0A%F0%9F%A4%A1%0A%F0%9F%91%BD&_c=#cccc88&f:3;&=!%0A1%0A%0A%F0%9F%91%88&_f:3;&=/@%0A2%0A%0A%F0%9F%91%89&_f:3;&=#%0A3%0A%0A%F0%9F%91%86&_f:3;&=$%0A4%0A%0A%F0%9F%91%87&_c=#a0cca0&f:3;&=%25%0A5%0A%F0%9F%98%84%0A%F0%9F%98%8A%0A%0A%0A%0A%0A%F0%9F%98%86%0A%F0%9F%A4%A3%0A%F0%9F%98%82&_f:3;&=%5E%0A6%0A%F0%9F%98%9C%0A%F0%9F%98%89%0A%0A%0A%0A%0A%F0%9F%A4%97%0A%F0%9F%98%80%0A%F0%9F%98%81&_f:3;&=/&%0A7%0A%F0%9F%A5%B0%0A%F0%9F%98%8D%0A%0A%0A%0A%0A%F0%9F%98%87%0A%F0%9F%98%98%0A%F0%9F%98%8E&_f:3;&=*%0A8%0A%F0%9F%99%84%0A%F0%9F%A4%A8%0A%0A%0A%0A%0A%0A%F0%9F%98%92%0A%F0%9F%A4%94&_f:3;&=(%0A9%0A%F0%9F%98%8C%0A%F0%9F%A5%B1%0A%0A%0A%0A%0A%F0%9F%A4%AB%0A%F0%9F%A4%AE%0A%F0%9F%A4%90&_f:3;&=)%0A0%0A%F0%9F%98%B2%0A%F0%9F%A5%BA%0A%0A%0A%0A%0A%0A%F0%9F%A4%AF%0A%F0%9F%98%B1&_f:3;&=/_%0A-%0A%F0%9F%A4%AC%0A%F0%9F%98%A1%0A%0A%0A%0A%0A%F0%9F%98%A9%0A%F0%9F%98%A2%0A%F0%9F%98%AD&_c=#cccccc;&=+%0A/=&_w:2;&=Backspace;&@_w:1.5;&=Tab&_c=#cccca0&f:3;&=Q%0A%F0%9F%A1%BC%0A%E2%AE%A6%0A%E2%AE%A3%0A%0A%0A%0A%0A%E2%AE%B6&_f:3;&=W%0A%F0%9F%A1%B9%0A%F0%9F%A1%85%0A%E2%AE%8F%0A%0A%0A%0A%0A%E2%AE%B4&_f:3;&=E%0A%F0%9F%A1%BD%0A%E2%AE%A2%0A%E2%AE%A7%0A%0A%0A%0A%0A%E2%AE%B2&_c=#cccccc&f:3;&=R%0A%E2%9C%A1%0A%E2%98%A6%0A%E2%9C%9D%0A%0A%0A%0A%0A%E2%98%A5%0A%E2%98%AA&=T&=Y&=U&_c=#cca0cc&f:3;&=I%0A%F0%9F%91%8A%0A%E2%9C%8C%0A%F0%9F%92%AA%0A%0A%0A%0A%0A%F0%9F%A4%B7%0A%E2%9C%8A&_f:3;&=O%0A%F0%9F%A4%9D%0A%F0%9F%91%8C%0A%F0%9F%91%8D%0A%0A%0A%0A%0A%F0%9F%99%86%0A%F0%9F%91%8F&_f:3;&=P%0A%F0%9F%A4%A6%0A%F0%9F%96%95%0A%F0%9F%91%8E%0A%0A%0A%0A%0A%F0%9F%99%85%0A%F0%9F%99%8F&_c=#e67575&f:3;&=%7B%0A%5B%0A%E2%8F%AA%0A%E2%8F%A9%0A%0A%0A%0A%0A%F0%9F%94%80%0A%E2%8F%AE%0A%E2%8F%AD&_f:3;&=%7D%0A%5D%0A%E2%8F%B8%0A%E2%8F%AF%0A%0A%0A%0A%0A%E2%8F%BA%0A%E2%8F%8F%0A%E2%8F%B9&_c=#cccccc&w:1.5;&=%7C%0A%5C;&@_w:1.75;&=Caps%20Lock&_c=#cccca0&f:3;&=A%0A%F0%9F%A1%B8%0A%F0%9F%A1%84%0A%E2%AE%8E%0A%0A%0A%0A%0A%E2%AE%B0&_f:3;&=S%0A%0A%E2%86%97%0A%E2%86%98%0A%0A%0A%0A%0A%E2%86%96%0A%0A%E2%86%99&_f:3;&=D%0A%F0%9F%A1%BA%0A%F0%9F%A1%86%0A%E2%AE%8C%0A%0A%0A%0A%0A%E2%AE%B3&_c=#a0a0cc&fa@:0&:2&:2&:2&:0&:0&:0&:0&:2&:2;;&=F%0A%E2%99%80%0A%F0%9F%91%A9%0A%F0%9F%91%A7%0A%0A%0A%0A%0A%F0%9F%91%B0%0A%F0%9F%91%B5&_f:3;&=G%0A%F0%9F%91%B6%0A%F0%9F%A7%91%0A%F0%9F%A7%92%0A%0A%0A%0A%0A%0A%F0%9F%A7%93&_c=#e8b3c6;&=H%0A%F0%9F%92%9D%0A%F0%9F%92%94%0A%F0%9F%92%98%0A%0A%0A%0A%0A%F0%9F%92%8C%0A%F0%9F%92%95&_c=#cccccc;&=J&=K&=L&_f:3;&=/:%0A/;&_f:3;&=%22%0A'&_w:2.25;&=Enter;&@_w:2.25;&=Shift&_c=#cccca0&f:3;&=Z%0A%F0%9F%A1%BF%0A%E2%AE%A1%0A%E2%AE%A4%0A%0A%0A%0A%0A%E2%AE%B1&_f:3;&=X%0A%F0%9F%A1%BB%0A%F0%9F%A1%87%0A%E2%AE%8D%0A%0A%0A%0A%0A%E2%AE%B7&_f:3;&=C%0A%F0%9F%A1%BE%0A%E2%AE%A5%0A%E2%AE%A0%0A%0A%0A%0A%0A%E2%AE%B5&_c=#a0cca0;&=V&_c=#ebaf8d&f:3;&=B%0A%F0%9F%8D%B7%0A%F0%9F%A5%A4%0A%E2%98%95%0A%0A%0A%0A%0A%F0%9F%8D%B9%0A%F0%9F%8D%BA&_c=#a0cccc;&=N&_c=#a0a0cc&f:3;&=M%0A%E2%99%82%0A%F0%9F%91%A8%0A%F0%9F%91%A6%0A%0A%0A%0A%0A%F0%9F%A4%B5%0A%F0%9F%91%B4&_c=#cccccc&f:3;&=%3C%0A,&_f:3;&=%3E%0A.&_fa@:0&:0&:2&:2&:0&:0&:0&:0&:2&:2&:2;;&=?%0A//%0A%E2%9D%97%0A%E2%9D%93%0A%0A%0A%0A%0A%E2%81%89%EF%B8%8F%0A%E2%9D%95%0A%E2%9D%94&_w:2.75;&=Shift;&@_w:1.25;&=Ctrl&_w:1.25;&=Win&_w:1.25;&=Alt&_a:7&w:6.25;&=&_a:4&w:1.25;&=Alt&_w:1.25;&=Win&_w:1.25;&=Menu&_w:1.25;&=Ctrl
+
+
+
+
+*/
