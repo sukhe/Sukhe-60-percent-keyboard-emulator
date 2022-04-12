@@ -20,12 +20,12 @@ The script features are described in more detail in the following articles:
 Script files are located in the ‘Scripts’ folder. The main (start) script is Sukhe_60_percent_keyboard_emulator.ahk
 
 To run this script automatically after user login, follow these steps:
-1. Install AutoHotkey (https://autohotkey.com/)
+1. Install [AutoHotkey](https://autohotkey.com/)
 2. Create shortcut of this script
 3. Move shortcut to startup folder (%appdata%\Microsoft\Windows\Start Menu\Programs\Startup)
 
 For example — C:\Users\MyName\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 
 For immediately script start:
-1. Install AutoHotkey (https://autohotkey.com/)
+1. Install [AutoHotkey](https://autohotkey.com/)
 2. Double click on this file in the explorer
