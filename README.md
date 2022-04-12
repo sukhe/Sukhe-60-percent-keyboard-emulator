@@ -9,6 +9,6 @@ This makes it possible to test whether it will be convenient for you to work on 
 The script can also be used with a regular keyboard. It will add more features to you.
 
 The script features are described in more detail in the following articles:
-- [link to article 1](http://dou.ua)
-- [link to article 2](http://dou.ua)
-- [link to article 3](http://dou.ua)
+- [Link to article 1 (will be added after the article is published)](http://dou.ua)
+- [Link to article 2 (will be added after the article is published)](http://dou.ua)
+- [Link to article 3 (will be added after the article is published)](http://dou.ua)
