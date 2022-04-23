@@ -66,14 +66,6 @@ fsend(letter) {
 
 WithNumpad := false
 
-; проверить все отключенные переменные на то, чтобы они не применялись где-то
-; дальше в скриптах
-
-
-; The RAlt key can act as RAlt, Space, Zero, or Numeric Dot
-; Combination for switching: CapsLock + 3
-; Possible values: "ralt", "space", "zero", "dot"
-
 ; Hexadecimal digits can be upper or lower case (A—F or a—f)
 ; Combination for switching: CapsLock+y
 ; Possible values: true, false
@@ -81,7 +73,6 @@ WithNumpad := false
 HexNumbersUpper := true
 
 ; The decimal separator can be locale-dependent or always be a dot
-;;;;;; Combination for switching: CapsLock + 5
 ; Possible values: true, false
 
 NumpadDotAlwaysDot := true
@@ -307,6 +298,7 @@ Russian « »	as		„ “ df
 
 !a::fsend("{U+2217}")	; ∗ Asterisk Operator
 ^a::fsend("{U+2042}")	; ⁂ Asterism
+#a::fsend("{U+204A}")	; ⁊ Tironian Sign Et
 
 !s::fsend("{U+00A7}")	; § Section Sign
 ^s::fsend("{U+00B6}")	; ¶ Pilcrow Sign / paragraph sign

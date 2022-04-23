@@ -21,7 +21,7 @@ global DisableSearchDiacritic
 }
 
 one_html_symbol() {
-	MsgBox, 64,,One HTML, 1
+	MsgBox, 64,,One HTML, 0.5
 	global HTMLCode
 	HTMLCode := true
 }
@@ -62,7 +62,7 @@ start_compose() {
 }
 
 one_arrow() {
-	MsgBox, 64,,One arrow, 1
+	MsgBox, 64,,One arrow, 0.5
 	global ArrowLayer
 	ArrowLayer := true
 }
