@@ -11,7 +11,7 @@ This gives you the opportunity to test whether you will be comfortable working o
 The script can also be used with a regular keyboard. It will give you some extra features.
 
 The script features are described in more detail in the following articles:
-- [Link to article 1 (will be added after the article is published)](http://dou.ua)
+- [Как превратить обычную клавиатуру в 60-процентную. Эксперимент, часть 1](https://dou.ua/forums/topic/37776/)
 - [Link to article 2 (will be added after the article is published)](http://dou.ua)
 - [Link to article 3 (will be added after the article is published)](http://dou.ua)
 
