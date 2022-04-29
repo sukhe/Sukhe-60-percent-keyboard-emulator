@@ -12,7 +12,7 @@ The script can also be used with a regular keyboard. It will give you some extra
 
 The script features are described in more detail in the following articles:
 - [Как превратить обычную клавиатуру в 60-процентную. Эксперимент, часть 1](https://dou.ua/forums/topic/37776/)
-- [Link to article 2 (will be added after the article is published)](http://dou.ua)
+- [Типографская раскладка для 60-процентной клавиатуры. Эксперимент, часть 2](https://dou.ua/forums/topic/37897/)
 - [Link to article 3 (will be added after the article is published)](http://dou.ua)
 
 # How it works
