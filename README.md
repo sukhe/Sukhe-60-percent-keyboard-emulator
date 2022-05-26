@@ -1,16 +1,14 @@
 # 60 percent keyboard emulator
 
-This [AutoHotkey](https://autohotkey.com/) script is designed to emulate the operation of a 60% keyboard. 
+This [AutoHotkey](https://autohotkey.com/) script is designed to emulate a 60% keyboard with any traditional keyboard.
 
-As a hardware part, you can use any traditional keyboard.
+It remaps the keys so that the navigation and auxiliary keys are available from the main alphanumeric block.
 
-The script remaps the keys so that the navigation and auxiliary keys are available from the main keyboard block.
+Thus, you can test whether you will be comfortable working on a 60% keyboard.
 
-Thus, you can test whether it will be convenient for you to work on a 60% keyboard.
+In addition to remapping navigation keys, some additional features become available.
 
-The script can also be used with a regular keyboard. It will give you some extra features.
-
-For example, the first layer with remapped keys looks like this:
+For example, this is what the first layer with remapped keys looks like:
 
 ![First layer](./Images/Final/Space.png)
 
