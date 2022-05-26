@@ -7,7 +7,7 @@ As a hardware part, you can use any traditional keyboard.
 The script remaps the keys so that the navigation and auxiliary keys are available from the main keyboard block.
 
 For example, the first layer with remapped keys looks like this:
-![First layer](https://github.com/sukhe/Sukhe-60-percent-keyboard-emulator/Images/Final/Space.png)
+![First layer](./Images/Final/Space.png)
 
 Thus, you can test whether it will be convenient for you to work on a 60% keyboard.
 
