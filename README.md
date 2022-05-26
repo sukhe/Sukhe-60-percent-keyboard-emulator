@@ -1,6 +1,6 @@
 # 60 percent keyboard emulator
 
-This [AutoHotkey](https://autohotkey.com/) script is designed to emulate a 60% keyboard with any traditional keyboard.
+This [AutoHotkey](https://autohotkey.com/) script is designed to emulate a 60% keyboard with any regular keyboard.
 
 It remaps the keys so that the navigation and auxiliary keys are available from the main alphanumeric block.
 
