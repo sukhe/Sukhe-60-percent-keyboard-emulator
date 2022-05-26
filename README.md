@@ -6,12 +6,13 @@ As a hardware part, you can use any traditional keyboard.
 
 The script remaps the keys so that the navigation and auxiliary keys are available from the main keyboard block.
 
-For example, the first layer with remapped keys looks like this:
-![First layer](./Images/Final/Space.png)
-
 Thus, you can test whether it will be convenient for you to work on a 60% keyboard.
 
 The script can also be used with a regular keyboard. It will give you some extra features.
+
+For example, the first layer with remapped keys looks like this:
+
+![First layer](./Images/Final/Space.png)
 
 The script features are described in more detail in the following articles:
 - [Link to article 1 (will be added after the article is published)](https://127.0.0.1)
