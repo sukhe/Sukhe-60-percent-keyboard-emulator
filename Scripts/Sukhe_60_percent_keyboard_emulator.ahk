@@ -4,7 +4,7 @@ SendMode Input	; Recommended for new scripts due to its superior speed and relia
 SetWorkingDir %A_ScriptDir%	; Ensures a consistent starting directory.
 #SingleInstance Force
 
-#KeyHistory 10 
+#KeyHistory 10
 
 SetCapsLockState, Off
 SetNumLockState, Off
@@ -40,7 +40,7 @@ fsend(letter) {
 			Send %letter%
 		}
 	}
-	else 
+	else
 	{
 		if (Substr(letter,4,2)=="00")
 			html := Format("&#x{};",Substr(letter,6,2))
@@ -113,6 +113,11 @@ EmDashWithSpace := true
 
 DittoWithBars := true
 
+; If you do not use the standard Windows system calculator, you can disable its call 
+; and assign another program to the Calculator button.
+
+UseSystemCalculator := false
+
 ; ----------------------------------------------------------------
 ; Global variables and settings
 ; ----------------------------------------------------------------
@@ -152,17 +157,16 @@ unicodesymbol := ""
 
 #Include Default_keys_remapping.ahk
 
+; Emulate pressing the "Calculator" button
+Space & RWin::SendEvent {Launch_App2}
+
 ; ----------------------------------------------------------------
 ; Default InputLevel (from here to the end of the script)
 ; ----------------------------------------------------------------
 
 #InputLevel 0
 
-RWin::
-return
-
-; Run calculator
-Space & RWin::Send {Launch_App2}
+RWin::return
 
 
 !CapsLock::
@@ -188,6 +192,16 @@ if ((A_PriorKey = "Tab")) {
 }
 return
 
+#If UseSystemCalculator
+Launch_App2::
+if WinExist("Calculator")
+	WinActivate
+else
+	Run Calc
+return
+#If
+
+
 #If GetKeyState("Space", "P")
 
 ; ---------------------------------------------------------------- 
@@ -197,7 +211,7 @@ return
 *m::Send {Blind}{Backspace}	; m
 *sc033::Send {Blind}{Del}	; ,<
 *sc028::Send {Blind}{Esc}	; '"
-*h::Send {Blind}{Enter}	; h
+*h::Send {Blind}{PgDn}	; h
 
 *sc01A::Send {Blind}{Ins}	; [{
 *sc01B::Send {Blind}{ScrollLock}	; ]}
@@ -215,7 +229,7 @@ Backspace::Send {Blind}{PrintScreen}
 *u::Send {Blind}{Home}	; u
 *o::Send {Blind}{End}	; o
 *p::Send {Blind}{PgUp}	; p
-*sc027::Send {Blind}{PgDn}	; ;:
+*sc027::Send {Blind}{Enter}	; ;:
 
 ; ----------------------------------------------------------------
 ; Functional keys
@@ -240,7 +254,7 @@ Backspace::Send {Blind}{PrintScreen}
 
 /*
 The apostrophe characters U+2019 and U+02BC are rendered identically. 
-But they have different meanings. 
+But they have different meanings.
 2019 is a punctuation apostrophe and 02BC is a letter apostrophe.
 
 Punctuation marks generally break words (like «we've»).

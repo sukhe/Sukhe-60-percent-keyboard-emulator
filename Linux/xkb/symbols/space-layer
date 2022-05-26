@@ -1,0 +1,90 @@
+xkb_symbols "sukhe" { 
+       include "pc+us(intl-unicode)+ua:2+inet(evdev)+group(alt_shift_toggle)+capslock(escape)+compose(rwin)"
+
+// Level 5 is used because both of my keyboard layouts have a third layer
+// Group 1 - US (International unicode), Group 2 - Ukrainian unicode
+
+       key <SPCE> { [ ISO_Level5_Shift ] };
+       modifier_map Mod3 { ISO_Level5_Shift };
+
+       key.type = "EIGHT_LEVEL";
+
+       key     <> { [ space ] };
+
+       key <TLDE> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, U02BC, U02BB, U00AA, U00BA ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, U02BC, U02BB, U00AA, U00BA ] };	//`'
+       key <BKSL> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Pause ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Pause ] };	// \ґ
+
+       key <AD01> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, braceleft, U2039, U2048, U203C ],
+    		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, braceleft, U2039, U2048, U203C ] };	//qй
+       key <AD02> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, braceright, U203A ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, braceright, U203A ] };	//wц
+       key <AD03> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, underscore, U201A, U20AC ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, underscore, U201A, U20AC ] };	//eу
+       key <AD04> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, exclam, U2018, U2012, U00AE ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, exclam, U2018, U2012, U00AE ] };	//rк
+       key <AD05> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2011, U2019, U00AD, U2122 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2011, U2019, U00AD, U2122 ] };		//tе
+       key <AD06> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, endash, U2015, U2E3A, U2E3B ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, endash, U2015, U2E3A, U2E3B ] };	//yн
+
+       key <AD07> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Home, Home ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Home, Home ] };		//uг
+       key <AD08> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Up, Up ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Up, Up ] };		//iш
+       key <AD09> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, End, End ], 
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, End, End ] };		//oщ
+       key <AD10> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Page_Up, Page_Up ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Page_Up, Page_Up ] };	//pз
+
+       key <AD11> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Insert ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Insert ] };	//[х
+       key <AD12> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Scroll_Lock ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Scroll_Lock ] };	//]ї
+
+       key <AC01> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, parenleft, U00AB, U2217, U2042 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, parenleft, U00AB, U2217, U2042 ] };	//aф
+       key <AC02> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, parenright, U00BB, U00A7, U00B6 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, parenright, U00BB, U00A7, U00B6 ] };	//sі
+       key <AC03> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, bracketleft, U201E, U3003, U00B7 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, bracketleft, U201E, U3003, U00B7 ] };	//dв
+       key <AC04> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, bracketright, U201C, U0192, U2055 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, bracketright, U201C, U0192, U2055 ] };	//fа
+       key <AC05> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, emdash, U201D, U2020, U2021 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, emdash, U201D, U2020, U2021 ] };	//gп
+
+       key <AC06> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Page_Down ], 
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Page_Down ]};	//hр
+       key <AC07> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Left ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Left ] };		//jо
+       key <AC08> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Down ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Down ] };		//kл
+       key <AC09> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Right ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Right ] };		//lд
+       key <AC10> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Return ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Return ] };	//;ж
+       key <AC11> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Escape ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Escape ] };	//'є
+
+       key <AB01> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U00B0 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U00B0 ] };	//zя
+       key <AB02> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2717, U2032 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2717, U2032 ] };	//xч
+       key <AB03> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U00A2, U2033, U00A9 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U00A2, U2033, U00A9 ] };	//сc
+       key <AB04> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2713, U2034 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2713, U2034 ] };	//vм
+       key <AB05> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2022, U25E6, U2043 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2022, U25E6, U2043 ] };	//bи
+       key <AB06> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2116, U00AC ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2116, U00AC ] };	//nт
+       key <AB07> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, BackSpace ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, BackSpace ] };	//mь
+       key <AB08> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Delete ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, Delete ] };	//,б
+       key <AB09> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2026, U205D ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U2026, U205D ] };	//.ю
+       key <AB10> { [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U00BF, U00A1 ],
+		    [ NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, NoSymbol, U00BF, U00A1 ] };	// /.
+   };

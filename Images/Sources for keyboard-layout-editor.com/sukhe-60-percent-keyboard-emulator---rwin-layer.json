@@ -289,7 +289,7 @@
         2
       ]
     },
-    "F\n🔥\n‰\n%\n\n\n\n\n\n💾",
+    "F\n🔥\n‰\n%\n\n\n\n\n⚜️\n💾",
     {
       "fa": [
         0,
@@ -421,21 +421,21 @@
       "fa": [
         0,
         2,
-        2,
+        1,
         1
       ]
     },
-    "M\n\n\nCtrl BS\n\n\n\n\n\n🔍",
+    "M\n\n🡄Del\nCtrl BS\n\n\n\n\n\n🔍",
     {
       "fa": [
         0,
         0,
-        2,
+        1,
         1
       ]
     },
-    "<\n,\n\nCtrl Del",
-    ">\n.",
+    "<\n,\nDel🡆\nCtrl Del",
+    ">\n.\nDel Wrd\nDel Line",
     {
       "c": "#B2AA7E",
       "f": 3

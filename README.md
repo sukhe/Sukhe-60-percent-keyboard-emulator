@@ -6,14 +6,17 @@ As a hardware part, you can use any traditional keyboard.
 
 The script remaps the keys so that the navigation and auxiliary keys are available from the main keyboard block.
 
-This gives you the opportunity to test whether you will be comfortable working on a 60 percent keyboard.
+For example, the first layer with remapped keys looks like this:
+![First layer](https://github.com/sukhe/Sukhe-60-percent-keyboard-emulator/Images/Final/Space.png)
+
+Thus, you can test whether it will be convenient for you to work on a 60% keyboard.
 
 The script can also be used with a regular keyboard. It will give you some extra features.
 
 The script features are described in more detail in the following articles:
-- [Как превратить обычную клавиатуру в 60-процентную. Эксперимент, часть 1](https://dou.ua/forums/topic/37776/)
-- [Типографская раскладка для 60-процентной клавиатуры. Эксперимент, часть 2](https://dou.ua/forums/topic/37897/)
-- [Типографская раскладка для 60-процентной клавиатуры. Эксперимент, часть 3](https://dou.ua/forums/topic/38042/)
+- [Link to article 1 (will be added after the article is published)](https://127.0.0.1)
+- [Link to article 2 (will be added after the article is published)](https://127.0.0.1)
+- [Link to article 3 (will be added after the article is published)](https://127.0.0.1)
 
 # How it works
 

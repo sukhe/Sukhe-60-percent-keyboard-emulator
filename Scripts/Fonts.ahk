@@ -1,4 +1,4 @@
-﻿#If (ffonts="Shift_f" and not fcompose)
+﻿#If (ffonts="Shift_a" and not fcompose)
 +a::fsend("{U+1D400}")	; 𝐀
 +b::fsend("{U+1D401}")	; 𝐁
 +c::fsend("{U+1D402}")	; 𝐂
@@ -64,7 +64,7 @@ z::fsend("{U+1D433}")	; 𝐳
 #If
 
 
-#If (ffonts="Alt_f" and not fcompose)
+#If (ffonts="Alt_a" and not fcompose)
 +a::fsend("{U+1D434}")	; 𝐴
 +b::fsend("{U+1D435}")	; 𝐵
 +c::fsend("{U+1D436}")	; 𝐶
@@ -120,7 +120,7 @@ z::fsend("{U+1D467}")	; 𝑧
 #If
 
 
-#If (ffonts="Shift_Alt_f" and not fcompose)
+#If (ffonts="Shift_Alt_a" and not fcompose)
 +a::fsend("{U+1D468}")	; 𝑨
 +b::fsend("{U+1D469}")	; 𝑩
 +c::fsend("{U+1D46A}")	; 𝑪
@@ -285,7 +285,7 @@ y::fsend("{U+1D502}")	; 𝔂
 z::fsend("{U+1D503}")   ; 𝔃
 #If
 
-#If (ffonts="g" and not fcompose)
+#If (ffonts="f" and not fcompose)
 +a::fsend("{U+1D504}")	; 𝔄
 +b::fsend("{U+1D505}")	; 𝔅
 +c::fsend("{U+1D506}")	; 𝔆
@@ -340,7 +340,7 @@ y::fsend("{U+1D536}")	; 𝔶
 z::fsend("{U+1D537}")	; 𝔷
 #If
 
-#If (ffonts="Shift_g" and not fcompose)
+#If (ffonts="Shift_f" and not fcompose)
 +a::fsend("{U+1D56C}")	; 𝕬
 +b::fsend("{U+1D56D}")	; 𝕭
 +c::fsend("{U+1D56E}")	; 𝕮
@@ -635,7 +635,7 @@ y::fsend("{U+1D66E}")	; 𝙮
 z::fsend("{U+1D66F}")	; 𝙯
 #If
 
-#If (ffonts="t" and not fcompose)
+#If (ffonts="n" and not fcompose)
 +a::fsend("{U+1D670}")	; 𝙰
 +b::fsend("{U+1D671}")	; 𝙱
 +c::fsend("{U+1D672}")	; 𝙲
@@ -765,7 +765,7 @@ z::fsend("{U+1D56B}")	; 𝕫
 9::fsend("{U+1D7E1}")	; 𝟡
 #If
 
-#If (ffonts="0" and not fcompose)
+#If (ffonts="o" and not fcompose)
 +a::fsend("{U+24B6}")	; Ⓐ
 +b::fsend("{U+24B7}")	; Ⓑ
 +c::fsend("{U+24B8}")	; Ⓒ
@@ -842,7 +842,7 @@ z::fsend("{U+24E9}")	; ⓩ
 9::fsend("{U+2468}")	; ⑨
 #If
 
-#If (ffonts="Shift_0" and not fcompose)
+#If (ffonts="Shift_o" and not fcompose)
 *a::fsend("{U+1F150}")	; 🅐
 *b::fsend("{U+1F151}")	; 🅑
 *c::fsend("{U+1F152}")	; 🅒
@@ -891,6 +891,20 @@ z::fsend("{U+24E9}")	; ⓩ
 7::fsend("{U+277C}")    ; ❼
 8::fsend("{U+277D}")    ; ❽
 9::fsend("{U+277E}")    ; ❾
+#If
+
+#If (ffonts="Alt_o" and not fcompose)
+1::fsend("{U+24F5}")    ; ⓵
+2::fsend("{U+24F6}")    ; ⓶
+3::fsend("{U+24F7}")    ; ⓷
+4::fsend("{U+24F8}")    ; ⓸
+5::fsend("{U+24F9}")    ; ⓹
+6::fsend("{U+24FA}")    ; ⓺
+7::fsend("{U+24FB}")    ; ⓻
+8::fsend("{U+24FC}")    ; ⓼
+9::fsend("{U+24FD}")    ; ⓽
++0::fsend("{U+24FE}")    ; ⓾
+0::fsend("{U+24FE}")    ; ⓾
 #If
 
 #If (ffonts="q" and not fcompose)
@@ -1056,19 +1070,6 @@ z::fsend("{U+24B5}")    ; ⒵
 9::fsend("{U+247C}")    ; ⑼
 #If
 
-#If (ffonts="Alt_0" and not fcompose)
-1::fsend("{U+24F5}")    ; ⓵
-2::fsend("{U+24F6}")    ; ⓶
-3::fsend("{U+24F7}")    ; ⓷
-4::fsend("{U+24F8}")    ; ⓸
-5::fsend("{U+24F9}")    ; ⓹
-6::fsend("{U+24FA}")    ; ⓺
-7::fsend("{U+24FB}")    ; ⓻
-8::fsend("{U+24FC}")    ; ⓼
-9::fsend("{U+24FD}")    ; ⓽
-+0::fsend("{U+24FE}")    ; ⓾
-0::fsend("{U+24FE}")    ; ⓾
-#If
 
 #If (ffonts="sc034" and not fcompose)
 +0::fsend("{U+2491}")    ; ⒑
@@ -1120,7 +1121,7 @@ z::fsend("{U+24B5}")    ; ⒵
 9::fsend("{U+FF19}")    ; ９
 #If
 
-#If (ffonts="m" and not fcompose)
+#If (ffonts="l" and not fcompose)
 ; капитель
 sc01A::fsend("{U+1D01}")	; ᴁ Latin Letter Small Capital Ae
 sc01B::fsend("{U+0276}")	; ɶ Latin Letter Small Capital Oe
@@ -1154,7 +1155,7 @@ z::fsend("{U+1D22}")	; ᴢ Latin Letter Small Capital Z
 #If
 
 ; superscript minuscule
-#If (ffonts="Shift_m" and not fcompose)
+#If (ffonts="Shift_l" and not fcompose)
 a::fsend("{U+1D43}")	; ᵃ Modifier Letter Small A
 b::fsend("{U+1D47}")	; ᵇ Modifier Letter Small B
 c::fsend("{U+1D9C}")	; ᶜ Modifier Letter Small C
@@ -1183,8 +1184,7 @@ z::fsend("{U+1DBB}")	; ᶻ Modifier Letter Small Z
 #If
 
 ; subscript minuscule
-
-#If (ffonts="Alt_m" and not fcompose)
+#If (ffonts="Alt_l" and not fcompose)
 a::fsend("{U+2090}")	; ₐ Latin Subscript Small Letter A
 e::fsend("{U+2091}")	; ₑ Latin Subscript Small Letter E
 h::fsend("{U+2095}")	; ₕ Latin Subscript Small Letter H
@@ -1205,7 +1205,7 @@ x::fsend("{U+2093}")	; ₓ Latin Subscript Small Letter X
 g::fsend("{U+1DA2}")	; ᶢ Modifier Letter Small Script G
 #If
 
-#If (ffonts="Shift_e" and not fcompose)
+#If (ffonts="Shift_g" and not fcompose)
 !d::fsend("{U+1D6DB}")    ; 𝛛 Mathematical Bold Partial Differential
 !e::fsend("{U+1D6DC}")    ; 𝛜 Mathematical Bold Epsilon Symbol
 !u::fsend("{U+1D6DD}")    ; 𝛝 Mathematical Bold Theta Symbol
@@ -1268,7 +1268,7 @@ c::fsend("{U+1D6D9}")    ; 𝛙
 v::fsend("{U+1D6DA}")    ; 𝛚
 #If
 
-#If (ffonts="Alt_e" and not fcompose)
+#If (ffonts="Alt_g" and not fcompose)
 !d::fsend("{U+1D715}")    ; 𝜕 Mathematical Italic Partial Differential
 !e::fsend("{U+1D716}")    ; 𝜖 Mathematical Italic Epsilon Symbol
 !u::fsend("{U+1D717}")    ; 𝜗 Mathematical Italic Theta Symbol
@@ -1331,7 +1331,7 @@ c::fsend("{U+1D713}")    ; 𝜓
 v::fsend("{U+1D714}")    ; 𝜔
 #If
 
-#If (ffonts="Shift_Alt_e" and not fcompose)
+#If (ffonts="Shift_Alt_g" and not fcompose)
 !d::fsend("{U+1D74F}")    ; 𝝏 Mathematical Bold Italic Partial Differential
 !e::fsend("{U+1D750}")    ; 𝝐 Mathematical Bold Italic Epsilon Symbol
 !u::fsend("{U+1D751}")    ; 𝝑 Mathematical Bold Italic Theta Symbol

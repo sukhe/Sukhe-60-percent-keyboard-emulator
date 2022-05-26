@@ -127,8 +127,10 @@ return
 #If (RWinKey="RWin")
 RWin::return
 
+; Detect pressed Space to disable NumLock mode switching 
+; while starting Calculator
 RWin Up::
-if (A_PriorKey = "RWin")
+if ((A_PriorKey = "RWin") and (!GetKeyState("Space", "P")))
 {
     SendEvent {NumLock}
 }
@@ -140,7 +142,7 @@ return
 PrintScreen::return
 
 PrintScreen Up::
-if (A_PriorKey = "PrintScreen")
+if ((A_PriorKey = "PrintScreen") and (!GetKeyState("Space", "P")))
 {
     SendEvent {NumLock}
 }
@@ -154,7 +156,7 @@ RAlt::return
 
 RAlt Up::
 <^>! Up::
-if (A_PriorKey = "RAlt")
+if ((A_PriorKey = "RAlt") and (!GetKeyState("Space", "P")))
 {
     SendEvent {NumLock}
 }
@@ -166,7 +168,7 @@ return
 RControl::return
 
 RControl Up::
-if (A_PriorKey = "RControl")
+if ((A_PriorKey = "RControl") and (!GetKeyState("Space", "P")))
 {
     SendEvent {NumLock}
 }
@@ -178,7 +180,7 @@ return
 AppsKey::return
 
 AppsKey Up::
-if (A_PriorKey = "AppsKey")
+if ((A_PriorKey = "AppsKey") and (!GetKeyState("Space", "P")))
 {
     SendEvent {NumLock}
 }
