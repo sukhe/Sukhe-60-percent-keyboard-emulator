@@ -45,7 +45,43 @@
 +q::fcyr("{U+042E}")	; Ю Cyrillic Capital Letter Yu
 +r::fcyr("{U+042F}")	; Я Cyrillic Capital Letter Ya
 +w::fcyr("{U+0429}")	; Щ Cyrillic Capital Letter Shcha
-^i::fcyr("{U+0418}")	; И Cyrillic Capital Letter I
+
+^i::
++!i::fcyr("{U+0418}")	; И Cyrillic Capital Letter I
+!i::fcyr("{U+0438}")	; и Cyrillic Small Letter I
+
+^n::
++!n::fcyr("{U+04A2}")	; Ң Cyrillic Capital Letter En with Descender
+!n::fcyr("{U+04A3}")	; ң Cyrillic Small Letter En with Descender
+
+^f::
++!f::fcyr("{U+0492}")	; Ғ Cyrillic Capital Letter Ghe with Stroke
+!f::fcyr("{U+0493}")	; ғ Cyrillic Small Letter Ghe with Stroke
+
+^k::
++!k::fcyr("{U+049A}")	; Қ Cyrillic Capital Letter Ka with Descender
+!k::fcyr("{U+049B}")	; қ Cyrillic Small Letter Ka with Descender
+
+^v::
++!v::fcyr("{U+04B0}")	; Ұ Cyrillic Capital Letter Straight U with Stroke
+!v::fcyr("{U+04B1}")	; ұ Cyrillic Small Letter Straight U with Stroke
++v::fcyr("{U+04AE}")	; Ү Cyrillic Capital Letter Straight U
+v::fcyr("{U+04AF}")	; ү Cyrillic Small Letter Straight U
+
+^m::
++!m::fcyr("{U+04E2}")	; Ӣ Cyrillic Capital Letter I with Macron макроном
+!m::fcyr("{U+04E3}")	; ӣ Cyrillic Small Letter I with Macron
+
+^y::
++!y::fcyr("{U+04EE}")	; Ӯ Cyrillic Capital Letter U with Macron макроном
+!y::fcyr("{U+04EF}")	; ӯ Cyrillic Small Letter U with Macron
+
+^sc027::
++!sc027::fcyr("{U+04C1}")	; Ӂ Cyrillic Capital Letter Zhe with Breve
+!sc027::fcyr("{U+04C2}")	; ӂ Cyrillic Small Letter Zhe with Breve
++sc027::fcyr("{U+0496}")	; Җ Cyrillic Capital Letter Zhe with Descender литеры
+sc027::fcyr("{U+0497}")	; җ Cyrillic Small Letter Zhe with Descender
+
 
 
 a::fcyr("{U+04D5}")	; ӕ Cyrillic Small Ligature a Ie
@@ -76,8 +112,6 @@ sc01A::fcyr("{U+044C}")	; ь Cyrillic Small Letter Soft Sign
 q::fcyr("{U+044E}")	; ю Cyrillic Small Letter Yu
 r::fcyr("{U+044F}")	; я Cyrillic Small Letter Ya
 w::fcyr("{U+0449}")	; щ Cyrillic Small Letter Shcha
-!i::fcyr("{U+0438}")	; и Cyrillic Small Letter I
-
 
 +6::fcyr("{U+04D8}")	; Ә Cyrillic Capital Letter Schwa
 6::fcyr("{U+04D9}")	; ә Cyrillic Small Letter Schwa
@@ -85,28 +119,11 @@ w::fcyr("{U+0449}")	; щ Cyrillic Small Letter Shcha
 8::fcyr("{U+04E9}")	; ө Cyrillic Small Letter Barred O
 +h::fcyr("{U+04BA}")	; Һ Cyrillic Capital Letter Shha
 h::fcyr("{U+04BB}")	; һ Cyrillic Small Letter Shha
-^n::fcyr("{U+04A2}")	; Ң Cyrillic Capital Letter En with Descender
-!n::fcyr("{U+04A3}")	; ң Cyrillic Small Letter En with Descender
-^f::fcyr("{U+0492}")	; Ғ Cyrillic Capital Letter Ghe with Stroke
-!f::fcyr("{U+0493}")	; ғ Cyrillic Small Letter Ghe with Stroke
-^k::fcyr("{U+049A}")	; Қ Cyrillic Capital Letter Ka with Descender
-!k::fcyr("{U+049B}")	; қ Cyrillic Small Letter Ka with Descender
-+v::fcyr("{U+04AE}")	; Ү Cyrillic Capital Letter Straight U
-v::fcyr("{U+04AF}")	; ү Cyrillic Small Letter Straight U
-^v::fcyr("{U+04B0}")	; Ұ Cyrillic Capital Letter Straight U with Stroke
-!v::fcyr("{U+04B1}")	; ұ Cyrillic Small Letter Straight U with Stroke
-+sc027::fcyr("{U+0496}")	; Җ Cyrillic Capital Letter Zhe with Descender литеры
-sc027::fcyr("{U+0497}")	; җ Cyrillic Small Letter Zhe with Descender
-^sc027::fcyr("{U+04C1}")	; Ӂ Cyrillic Capital Letter Zhe with Breve
-!sc027::fcyr("{U+04C2}")	; ӂ Cyrillic Small Letter Zhe with Breve
+
 +x::fcyr("{U+04B2}")	; Ҳ Cyrillic Capital Letter Ha with Descender
 x::fcyr("{U+04B3}")	; ҳ Cyrillic Small Letter Ha with Descender
 +4::fcyr("{U+04B6}")	; Ҷ Cyrillic Capital Letter Che with Descender
 4::fcyr("{U+04B7}")	; ҷ	Cyrillic Small Letter Che with Descender
-^m::fcyr("{U+04E2}")	; Ӣ Cyrillic Capital Letter I with Macron макроном
-!m::fcyr("{U+04E3}")	; ӣ Cyrillic Small Letter I with Macron
-^y::fcyr("{U+04EE}")	; Ӯ Cyrillic Capital Letter U with Macron макроном
-!y::fcyr("{U+04EF}")	; ӯ Cyrillic Small Letter U with Macron
 
 ; Montenegrin letters « З́ » and « С́ »- sending two symbols
 +3::fcyr("{U+0417}{U+0301}")	; З́

@@ -118,12 +118,21 @@ DittoWithBars := true
 
 UseSystemCalculator := false
 
-; ----------------------------------------------------------------
-; Global variables and settings
-; ----------------------------------------------------------------
+; How to enter diacritics: before or after a character
+; Combination for switching: Shift+Compose
 
 DiacriticAfterSymbol := false
+
+; Disable replacing a combination of diacritic and character with a premade glyph with diacritics.
+; Attention! The replacement only works correctly if the diacritic is typed before the character
+; (DiacriticAfterSymbol := false).
+; Combination for switching: Win+Compose
+
 DisableSearchDiacritic := false
+
+; ----------------------------------------------------------------
+; Global variables
+; ----------------------------------------------------------------
 
 fcompose := false
 farray := ""
@@ -141,6 +150,9 @@ ArrowLayerLock := false
 EnterUnicode := false
 unicodesymbol := ""
 
+; ----------------------------------------------------------------
+; Local computer settings
+; ----------------------------------------------------------------
 
 ; Optional file with variables for the local computer
 ; This is useful if the main script files are shared across multiple computers
