@@ -14,7 +14,7 @@ For example, this is what the first layer with remapped keys looks like:
 
 The script features are described in more detail in the following articles:
 - [Как попробовать 60-процентную клавиатуру, если у вас её нет](https://habr.com/ru/post/659063/)
-- [Link to article 2 (will be added after the article is published)](https://127.0.0.1)
+- [Типографская раскладка для 60-процентной клавиатуры](https://habr.com/ru/post/659471/)
 - [Link to article 3 (will be added after the article is published)](https://127.0.0.1)
 
 # How it works
