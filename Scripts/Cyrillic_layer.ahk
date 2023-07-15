@@ -12,10 +12,10 @@
 		fsend(dia)
 		farray := ""
 	}
-	SetCapsLockState Off
+	SetCapsLockState 0
 }
 
-#If (CyrillicLayer or CyrillicLayerLock)
+#HotIf (CyrillicLayer or CyrillicLayerLock)
 
 +a::fcyr("{U+04D4}")	; Ӕ Cyrillic Capital Ligature a Ie
 +n::fcyr("{U+040A}")	; Њ Cyrillic Capital Letter Nje
@@ -131,4 +131,4 @@ x::fcyr("{U+04B3}")	; ҳ Cyrillic Small Letter Ha with Descender
 +c::fcyr("{U+0421}{U+0301}")	; С́
 c::fcyr("{U+0441}{U+0301}")	; с́
 
-#If
+#HotIf

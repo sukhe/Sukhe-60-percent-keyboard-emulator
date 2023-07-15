@@ -1,4 +1,4 @@
-#If (GetKeyState(RWinKey, "P"))
+#HotIf (GetKeyState(RWinKey, "P"))
 
 ; ----------------------------------------------------------------
 ; Arrows
@@ -111,7 +111,7 @@ y::fsend("{U+267B}")	; ♻ Black Universal Recycling Symbol
 +u::fsend("{U+2229}")	; ∩ Intersection
 u::fsend("{U+222A}")	; ∪ Union
 
-^i::farr("{U+2695}")	; ⚕ Staff of Aesculapius
+^i::fsend("{U+2695}")	; ⚕ Staff of Aesculapius
 !i::fsend("{U+222B}")	; ∫ Integral
 +i::fsend("{U+20B9}")	; ₹ Indian Rupee Sign
 i::fsend("{U+2139}")	; ℹ Information Source
@@ -272,4 +272,4 @@ g::fsend("{U+0060}")	; ` Grave Accent
 +sc035::fsend("?")
 sc035::fsend("/")
 
-#If
+#HotIf

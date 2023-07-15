@@ -31,3 +31,5 @@ For example — C:\Users\MyName\AppData\Roaming\Microsoft\Windows\Start Menu\Pro
 For immediately script start:
 1. Install [AutoHotkey](https://autohotkey.com/)
 2. Double click on this file in the explorer
+
+If the script doesn't run, try using AutoHotkey64_UIA.exe instead of AutoHotkey.exe

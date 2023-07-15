@@ -12,10 +12,10 @@ fgre(x)
 		fsend(dia)
 		farray := ""
 	}
-	SetCapsLockState Off
+	SetCapsLockState 0
 }
 
-#If (GreekLayer or GreekLayerLock)
+#HotIf (GreekLayer or GreekLayerLock)
 
 ; ----------------------------------------------------------------
 ; Greek letters
@@ -173,4 +173,4 @@ sc028::fgre("{U+216D}")	; Ⅽ Roman Numeral One Hundred
 sc01A::fgre("{U+216E}")	; Ⅾ Roman Numeral Five Hundred
 sc01B::fgre("{U+216F}")	; Ⅿ Roman Numeral One Thousand
 
-#If
+#HotIf

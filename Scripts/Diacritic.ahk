@@ -74,26 +74,31 @@ lay() {
 }
 
 
-#If fcompose
+#HotIf fcompose
 
 ; Zero-Width Non-Joiner
 ^Backspace::
+{
 	fsend("{U+200C}")
-	fcompose := false
+	global fcompose := false
 return
+}
 
 ; Combining Grapheme Joiner
 +Backspace::
+{
 	fsend("{U+034F}")
-	fcompose := false
+	global fcompose := false
 return
+}
 
 ; Zero-width Joiner
 Backspace::
+{
 	fsend("{U+200D}")
-	fcompose := false
+	global fcompose := false
 return
-
+}
 
 *Space::
 *a::
@@ -143,7 +148,9 @@ return
 *sc033::
 *sc034::
 *sc035::
-
+{
+global farray
+global ffonts
 
 k := A_ThisHotkey
 k := Substr(k,2)
@@ -155,7 +162,7 @@ if (farray="Math") {
 	} else {
 		ffonts := fullkeyname
 	}
-	fcompose := false
+	global fcompose := false
 	return
 }
 
@@ -166,7 +173,7 @@ if (DiacriticAfterSymbol) {
 	}
 	ddd := Diacr[fullkeyname]
 	fsend(ddd)
-	fcompose := false
+	global fcompose := false
 } else {
 
 
@@ -176,7 +183,7 @@ if ((fprev != "Start") and DisableSearchDiacritic) {
 	um := unmodif(fullkeyname)
 	fsend(um[1] . "{" . um[2] . "}")
 	fsend(Diacr[fprev])
-	fcompose := false
+	global fcompose := false
 	return
 }
 
@@ -206,16 +213,17 @@ if (farray="") {	; matching not found
 		umm := um[1] . "{" . um[2] . "}"
 		fsend(um[1] . "{" . um[2] . "}")
 	}
-	fcompose := false
+	global fcompose := false
 }
 
 if (SubStr(farray,1,2)="{U") {
 	fsend(farray)
-	fcompose := false
+	global fcompose := false
 }
 
 }
 
 return
+}
 
-#If
+#HotIf
