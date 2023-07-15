@@ -543,7 +543,7 @@ Space & CapsLock::
 ; Attach additional files
 ; ----------------------------------------------------------------
 
-#Include Diacritic.ahk
+;#Include Diacritic.ahk
 #Include RWin_pressed_layer.ahk
 #Include NumLock_On_layer.ahk
 #Include CapsLock_pressed_layer.ahk
