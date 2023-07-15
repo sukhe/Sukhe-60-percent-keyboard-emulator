@@ -9,10 +9,11 @@ fcaps(x) {
 	global unicodesymbol
 	global Unicode
 	If (A_PriorKey = "CapsLock" or A_PriorKey = "LShift" or A_PriorKey="RShift" or A_PriorKey = "LAlt") {
-		SetCapsLockState % !GetKeyState("CapsLock", "T") 
+		;SetCapsLockState % !GetKeyState("CapsLock", "T") 
+		SetCapsLockState !GetKeyState("CapsLock", "T") 
 	}
 		fsend(x)
-	SetCapsLockState Off
+	SetCapsLockState 0
 }
 
 fhex(x) {
@@ -29,14 +30,16 @@ fhex(x) {
 }
 
 
-#If GetKeyState("CapsLock", "P")
+#HotIf GetKeyState("CapsLock", "P")
 
 
 LControl & RAlt::
 RAlt::
 <^>!::
-fsend("{Space}")
-return
+{
+  fsend("{Space}")
+  return
+}
 
 ; >>>
 ; Additional HEX numbers over emulated numpad
@@ -71,20 +74,22 @@ sc027::fcaps("{NumpadAdd}")	; ;:
 sc028::fcaps("{=}")	; '"
 Enter::fcaps("{NumpadEnter}")	; Enter
 sc035::	; /?
+{
 	if (NumpadDotAlwaysDot = true) {
 		fcaps("{Raw}.")
 	} else {
 		fcaps("{NumpadDot}")
 	}
 return
+}
 
-#If
+#HotIf
 
 ; ----------------------------------------------------------------
 ; Entering Hex Numbers while pressing Caps Lock
 ; ----------------------------------------------------------------
 
-#If GetKeyState("CapsLock", "P")
+#HotIf GetKeyState("CapsLock", "P")
 
 *v::
 *b::
@@ -92,23 +97,25 @@ return
 *g::
 *r::
 *t::
+{
 	fhex(A_ThisHotkey)
 return
+}
 
-#If
+#HotIf
 
 ; ----------------------------------------------------------------
 ; Entering Symbols while pressing Caps Lock
 ; ----------------------------------------------------------------
 
-#If GetKeyState("CapsLock", "P")
+#HotIf GetKeyState("CapsLock", "P")
 
 *q::fcaps("{Raw}.")
 *w::fcaps("{Raw}'")
 *e::fcaps("{Raw};")
 
 *a::fcaps("{Raw},")
-*s::fcaps("{Raw}""")
+*s::fcaps('{Raw}"')
 *d::fcaps("{Raw}:")
 *z::fcaps("{Raw}<")
 *x::fcaps("{Raw}>")
@@ -132,49 +139,60 @@ return
 ; ----------------------------------------------------------------
 
 +y::
+{
+global WithNumpad
 if (WithNumpad) {
-	MsgBox, 64,,Compact (40-80`%) keyboard mode `n (without numpad), 2
+	MsgBox("Compact (40-80`%) keyboard mode `n (without numpad)",, "64 T2")
 	WithNumpad := false
 } else {
-	MsgBox, 64,,Fullsized keyboard mode, 2
+	MsgBox("Fullsized keyboard mode",, "64 T2")	
 	WithNumpad := true
 }
-SetCapsLockState Off
+SetCapsLockState 0
 return
+}
 
 !y::
+{
+global EmDashWithSpace
 if (EmDashWithSpace) {
-	MsgBox, 64,,Em Dash mode => Only dash, 2
+	MsgBox("Em Dash mode => Only dash",, "64 T2")	
 	EmDashWithSpace := false
 } else {
-	MsgBox, 64,,Em Dash mode => NBSpace + Em Dash + Space, 2
+	MsgBox("Em Dash mode => NBSpace + Em Dash + Space",, "64 T2")	
 	EmDashWithSpace := true
 }
-SetCapsLockState Off
+SetCapsLockState 0
 return
+}
 
 ^y::
+{
+global DittoWithBars
 if (DittoWithBars) {
-	MsgBox, 64,,Ditto only, 2
+	MsgBox("Ditto only",, "64 T2")	
 	DittoWithBars := false
 } else {
-	MsgBox, 64,,Ditto with horizontal bars on the sides, 2
+	MsgBox("Ditto with horizontal bars on the sides",, "64 T2")	
 	DittoWithBars := true
 }
-SetCapsLockState Off
+SetCapsLockState 0
 return
+}
 
 y::
+{
+global HexNumbersUpper
 if (HexNumbersUpper) {
-	MsgBox, 64,,Enable lowercase Hexadecimal keypad`nwhen NumLock mode is "On", 2
+	MsgBox("Enable lowercase Hexadecimal keypad`nwhen NumLock mode is 'On'",, "64 T2")	
 	HexNumbersUpper := false
 } else {
-	MsgBox, 64,,Enable uppercase Hexadecimal keypad`nwhen NumLock mode is "On", 2
+	MsgBox("Enable uppercase Hexadecimal keypad`nwhen NumLock mode is 'On'",, "64 T2")	
 	HexNumbersUpper := true
 }
-SetCapsLockState Off
+SetCapsLockState 0
 return
+}
 
-
-#If
+#HotIf
 

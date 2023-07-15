@@ -1,11 +1,12 @@
-#If GetKeyState("Tab", "P")
+#HotIf GetKeyState("Tab", "P")
 
 sc02B::fsend("{U+2044}")	; ⁄ Fraction Slash
 
 1::
+{
 k := GetKeySC(A_PriorKey)
 if (k=2) {
-	Send {Backspace}
+	Send "{Backspace}"
 	fsend("{U+215F}{U+2081}")
 } else if (k>1 and k<14) {
 	z := AKey[k]
@@ -15,11 +16,13 @@ if (k=2) {
 	fsend("{U+215F}")
 }
 return
+}
 
 2::
+{
 k := GetKeySC(A_PriorKey)
 if (k=2) {
-	Send {Backspace}
+	Send "{Backspace}"
 	fsend("{U+00BD}")
 } else if (k>1 and k<14) {
 	z := AKey[k]
@@ -27,12 +30,14 @@ if (k=2) {
 	fsend("{U+2044}{U+2082}")
 }
 return
+}
 
 3::
+{
 k := GetKeySC(A_PriorKey)
 if (k=2) {
 	z := AKey3[k]
-	Send {Backspace}
+	Send "{Backspace}"
 	fsend(z)
 } else if (k=3 or k=11) {
 	z := AKey3[k]
@@ -43,12 +48,14 @@ if (k=2) {
 	fsend("{U+2044}{U+2083}")
 }
 return
+}
 
 4::
+{
 k := GetKeySC(A_PriorKey)
 if (k=2) {
 	z := AKey4[k]
-	Send {Backspace}
+	Send "{Backspace}"
 	fsend(z)
 }
 if (k=1) {
@@ -60,12 +67,14 @@ if (k=1) {
 	fsend("{U+2044}{U+2084}")
 }
 return
+}
 
 5::
+{
 k := GetKeySC(A_PriorKey)
 if (k=2) {
 	z := AKey5[k]
-	Send {Backspace}
+	Send "{Backspace}"
 	fsend(z)
 } else if (k>1 and k<6) {
 	z := AKey5[k]
@@ -76,15 +85,17 @@ if (k=2) {
 	fsend("{U+2044}{U+2085}")
 }
 return
+}
 
 6::
+{
 k := GetKeySC(A_PriorKey)
 if (k=6) {
 	z := AKey6[k]
 	fsend(z)
 } else if (k=2) {
 	z := AKey6[k]
-	Send {Backspace}
+	Send "{Backspace}"
 	fsend(z)
 } else if (k>2 and k<14) {
 	z := AKey[k]
@@ -92,11 +103,13 @@ if (k=6) {
 	fsend("{U+2044}{U+2086}")
 }
 return
+}
 
 7::
+{
 k := GetKeySC(A_PriorKey)
 if (k=2) {
-	Send {Backspace}
+	Send "{Backspace}"
 	fsend("{U+2150}")
 } else if (k>2 and k<14) {
 	z := AKey[k]
@@ -104,12 +117,14 @@ if (k=2) {
 	fsend("{U+2044}{U+2087}")
 }
 return
+}
 
 8::
+{
 k := GetKeySC(A_PriorKey)
 if (k=2) {
 	z := AKey8[k]
-	Send {Backspace}
+	Send "{Backspace}"
 	fsend(z)
 } else if (k=4 or k=6 or k=8) {
 	z := AKey8[k]
@@ -120,11 +135,13 @@ if (k=2) {
 	fsend("{U+2044}{U+2088}")
 }
 return
+}
 
 9::
+{
 k := GetKeySC(A_PriorKey)
 if (k=2) {
-	Send {Backspace}
+	Send "{Backspace}"
 	fsend("{U+2151}")
 } else if (k>2 and k<14) {
 	z := AKey[k]
@@ -132,11 +149,13 @@ if (k=2) {
 	fsend("{U+2044}{U+2089}")
 }
 return
+}
 
 0::
+{
 k := GetKeySC(A_PriorKey)
 if (k=2) { 
-	Send {Backspace}
+	Send "{Backspace}"
 	fsend("{U+2152}")
 } else if (k>2 and k<14) {
 	z := AKey[k]
@@ -144,6 +163,7 @@ if (k=2) {
 	fsend("{U+2044}{U+2081}{U+2080}")
 }
 return
+}
 
 ; ----------------------------------------------------------------
 ; Superscript digits
@@ -189,26 +209,26 @@ return
 ; Functional keys for 40% keyboard
 ; ----------------------------------------------------------------
 
-*u::Send {Blind}{F1}	; u
-*i::Send {Blind}{F2}	; i
-*o::Send {Blind}{F3}	; o
-*p::Send {Blind}{F4}	; p
-*j::Send {Blind}{F5}	; j
-*k::Send {Blind}{F6}	; k
-*l::Send {Blind}{F7}	; l
-*sc027::Send {Blind}{F8}	; '"
-*m::Send {Blind}{F9}	; m
-*sc033::Send {Blind}{F10}	; ,<
-*sc034::Send {Blind}{F11}	; .>
-*sc035::Send {Blind}{F12}	; /?
+*u::Send "{Blind}{F1}"	; u
+*i::Send "{Blind}{F2}"	; i
+*o::Send "{Blind}{F3}"	; o
+*p::Send "{Blind}{F4}"	; p
+*j::Send "{Blind}{F5}"	; j
+*k::Send "{Blind}{F6}"	; k
+*l::Send "{Blind}{F7}"	; l
+*sc027::Send "{Blind}{F8}"	; '"
+*m::Send "{Blind}{F9}"	; m
+*sc033::Send "{Blind}{F10}"	; ,<
+*sc034::Send "{Blind}{F11}"	; .>
+*sc035::Send "{Blind}{F12}"	; /?
 
 ; ----------------------------------------------------------------
 ; Copy/Paste/Cut for Linux
 ; ----------------------------------------------------------------
 
-sc028::Send ^{Ins}
-sc01A::Send +{Ins}
-sc01B::Send +{Del}
+sc028::Send "^{Ins}"
+sc01A::Send "+{Ins}"
+sc01B::Send "+{Del}"
 
 ; ----------------------------------------------------------------
 ; Private Use Area
@@ -254,4 +274,4 @@ z::fsend("{U+0292}")	; ʒ Latin Small Letter Ezh
 c::fsend("{U+0259}")	; ə Latin Small Letter Schwa
 
 
-#If
+#HotIf

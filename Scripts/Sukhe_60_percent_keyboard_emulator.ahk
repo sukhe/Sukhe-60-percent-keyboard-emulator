@@ -1,13 +1,14 @@
-﻿#NoEnv	; Recommended for performance and compatibility with future AutoHotkey releases.
+﻿;#NoEnv	; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn	; Enable warnings to assist with detecting common errors.
-SendMode Input	; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%	; Ensures a consistent starting directory.
+SendMode "Input"	; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir A_ScriptDir	; Ensures a consistent starting directory.
 #SingleInstance Force
+#Requires AutoHotkey >=v2.0
 
-#KeyHistory 10
+;#KeyHistory 0 
 
-SetCapsLockState, Off
-SetNumLockState, Off
+SetCapsLockState "Off"
+SetNumLockState	"Off"
 
 ; ----------------------------------------------------------------
 ; Get admin privileges
@@ -22,11 +23,14 @@ If the code remains uncommented, after logging in, a UAC window will appear
 with a warning that AutoHotkey wants to start with elevated privileges.
 */
 
+/*
 if not A_IsAdmin
 {
-   Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
+   ;Run *RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
+   RunAs "%A_ScriptFullPath%"  ; Requires v1.0.92.01+
    ExitApp
 }
+*/
 
 ; ----------------------------------------------------------------
 ; Global functions
@@ -37,10 +41,10 @@ fsend(letter) {
 	global HTMLCodeLock
 	if ((not HTMLCode) and (not HTMLCodeLock)) {
 		if (letter!="Start") {
-			Send %letter%
+			Send letter
 		}
 	}
-	else
+	else 
 	{
 		if (Substr(letter,4,2)=="00")
 			html := Format("&#x{};",Substr(letter,6,2))
@@ -48,13 +52,14 @@ fsend(letter) {
 			html := Format("&#x{};",Substr(letter,5,3))
 		else
 			html := Format("&#x{};",Substr(letter,4,4))
-		Send {Raw}%html%
+		Send "{Raw}%html%"
 		HTMLCode := false
 	}
 	return
 }
 
 #Include Compose_and_Other_Arrays.ahk
+
 
 ; ----------------------------------------------------------------
 ; Default settings for keyboard and keys
@@ -66,6 +71,10 @@ fsend(letter) {
 
 WithNumpad := false
 
+; The RAlt key can act as RAlt, Space, Zero, or Numeric Dot
+; Combination for switching: CapsLock + 3
+; Possible values: "ralt", "space", "zero", "dot"
+
 ; Hexadecimal digits can be upper or lower case (A—F or a—f)
 ; Combination for switching: CapsLock+y
 ; Possible values: true, false
@@ -73,6 +82,7 @@ WithNumpad := false
 HexNumbersUpper := true
 
 ; The decimal separator can be locale-dependent or always be a dot
+;;;;;; Combination for switching: CapsLock + 5
 ; Possible values: true, false
 
 NumpadDotAlwaysDot := true
@@ -113,26 +123,12 @@ EmDashWithSpace := true
 
 DittoWithBars := true
 
-; If you do not use the standard Windows system calculator, you can disable its call 
-; and assign another program to the Calculator button.
-
-UseSystemCalculator := false
-
-; How to enter diacritics: before or after a character
-; Combination for switching: Shift+Compose
+; ----------------------------------------------------------------
+; Global variables and settings
+; ----------------------------------------------------------------
 
 DiacriticAfterSymbol := false
-
-; Disable replacing a combination of diacritic and character with a premade glyph with diacritics.
-; Attention! The replacement only works correctly if the diacritic is typed before the character
-; (DiacriticAfterSymbol := false).
-; Combination for switching: Win+Compose
-
 DisableSearchDiacritic := false
-
-; ----------------------------------------------------------------
-; Global variables
-; ----------------------------------------------------------------
 
 fcompose := false
 farray := ""
@@ -148,11 +144,8 @@ ArrowLayer := false
 ArrowLayerLock := false
 
 EnterUnicode := false
-unicodesymbol := ""
+global unicodesymbol := ""
 
-; ----------------------------------------------------------------
-; Local computer settings
-; ----------------------------------------------------------------
 
 ; Optional file with variables for the local computer
 ; This is useful if the main script files are shared across multiple computers
@@ -167,10 +160,9 @@ unicodesymbol := ""
 
 #InputLevel 1
 
+
 #Include Default_keys_remapping.ahk
 
-; Emulate pressing the "Calculator" button
-Space & RWin::SendEvent {Launch_App2}
 
 ; ----------------------------------------------------------------
 ; Default InputLevel (from here to the end of the script)
@@ -180,85 +172,79 @@ Space & RWin::SendEvent {Launch_App2}
 
 RWin::return
 
+; Run calculator
+Space & RWin::Send "{Launch_App2}"
 
-!CapsLock::
-	SetCapsLockState % !GetKeyState("CapsLock", "T") 
-return
+
+!CapsLock::SetCapsLockState !GetKeyState("CapsLock", "T") 
+
 
 
 *Space::
-if (GetKeyState("NumLock","T") and WithNumpad = false) {
-	Send {Blind}{Numpad0}
-} else {
-	Send {Blind}{Space}
+{
+	if (GetKeyState("NumLock","T") and WithNumpad = false) {
+		Send "{Blind}{Numpad0}"
+	} else {
+		Send "{Blind}{Space}"
+	}
 }
-return
 
 
 Tab::
-KeyWait, Tab
-if ((A_PriorKey = "Tab")) {
-	Send {Tab}
-} else {
-	Send %A_PriorKey%{Backspace}
+{
+	KeyWait("Tab")
+	if ((A_PriorKey = "Tab")) {
+		Send "{Tab}"
+	} else {
+		Send "%A_PriorKey%{Backspace}"
+	}
 }
-return
 
-#If UseSystemCalculator
-Launch_App2::
-if WinExist("Calculator")
-	WinActivate
-else
-	Run Calc
-return
-#If
-
-
-#If GetKeyState("Space", "P")
+#HotIf GetKeyState("Space", "P")
 
 ; ---------------------------------------------------------------- 
 ; General Purpose Keys
 ; ----------------------------------------------------------------
 
-*m::Send {Blind}{Backspace}	; m
-*sc033::Send {Blind}{Del}	; ,<
-*sc028::Send {Blind}{Esc}	; '"
-*h::Send {Blind}{PgDn}	; h
+*m::Send "{Blind}{Backspace}"	; m
+*sc033::Send "{Blind}{Del}"	; ,<
+*sc028::Send "{Blind}{Esc}"	; '"
+*h::Send "{Blind}{Enter}"	; h
 
-*sc01A::Send {Blind}{Ins}	; [{
-*sc01B::Send {Blind}{ScrollLock}	; ]}
-*sc02B::Send {Blind}{Pause}	; \|
-Backspace::Send {Blind}{PrintScreen}
+*sc01A::Send "{Blind}{Ins}"	; [{
+*sc01B::Send "{Blind}{ScrollLock}"	; ]}
+*sc02B::Send "{Blind}{Pause}"	; \|
+Backspace::Send "{Blind}{PrintScreen}"
 
 ; ----------------------------------------------------------------
 ; Cursor control keys
 ; ----------------------------------------------------------------
 
-*j::Send {Blind}{Left}	; j
-*k::Send {Blind}{Down}	; k
-*l::Send {Blind}{Right}	; l
-*i::Send {Blind}{Up}	; i
-*u::Send {Blind}{Home}	; u
-*o::Send {Blind}{End}	; o
-*p::Send {Blind}{PgUp}	; p
-*sc027::Send {Blind}{Enter}	; ;:
+*j::Send "{Blind}{Left}"	; j
+*k::Send "{Blind}{Down}"	; k
+*l::Send "{Blind}{Right}"	; l
+*i::Send "{Blind}{Up}"	; i
+*u::Send "{Blind}{Home}"	; u
+*o::Send "{Blind}{End}"	; o
+*p::Send "{Blind}{PgUp}"	; p
+*sc027::Send "{Blind}{PgDn}"	; ;:
 
 ; ----------------------------------------------------------------
 ; Functional keys
 ; ----------------------------------------------------------------
 
-*1::Send {Blind}{F1}
-*2::Send {Blind}{F2}
-*3::Send {Blind}{F3}
-*4::Send {Blind}{F4}
-*5::Send {Blind}{F5}
-*6::Send {Blind}{F6}
-*7::Send {Blind}{F7}
-*8::Send {Blind}{F8}
-*9::Send {Blind}{F9}
-*0::Send {Blind}{F10}
-*sc00C::Send {Blind}{F11}
-*sc00D::Send {Blind}{F12}
+*1::Send "{Blind}{F1}"
+*2::Send "{Blind}{F2}"
+*3::Send "{Blind}{F3}"
+*4::Send "{Blind}{F4}"
+*5::Send "{Blind}{F5}"
+*6::Send "{Blind}{F6}"
+*7::Send "{Blind}{F7}"
+*8::Send "{Blind}{F8}"
+*9::Send "{Blind}{F9}"
+*0::Send "{Blind}{F10}"
+*sc00C::Send "{Blind}{F11}"
+*sc00D::Send "{Blind}{F12}"
 
 ; ----------------------------------------------------------------
 ; Apostrophe, Quotation Marks
@@ -266,7 +252,7 @@ Backspace::Send {Blind}{PrintScreen}
 
 /*
 The apostrophe characters U+2019 and U+02BC are rendered identically. 
-But they have different meanings.
+But they have different meanings. 
 2019 is a punctuation apostrophe and 02BC is a letter apostrophe.
 
 Punctuation marks generally break words (like «we've»).
@@ -324,21 +310,21 @@ Russian « »	as		„ “ df
 
 !a::fsend("{U+2217}")	; ∗ Asterisk Operator
 ^a::fsend("{U+2042}")	; ⁂ Asterism
-#a::fsend("{U+204A}")	; ⁊ Tironian Sign Et
 
 !s::fsend("{U+00A7}")	; § Section Sign
 ^s::fsend("{U+00B6}")	; ¶ Pilcrow Sign / paragraph sign
 #s::fsend("{U+2117}")	; ℗ Sound Recording Copyright
 
 !d::
-if (DittoWithBars) {
-	fsend("{U+2015}")	; ― Horizontal Bar
-	fsend("{U+3003}")	; 〃 Ditto mark
-	fsend("{U+2015}")	; ― Horizontal Bar
-} else {
-	fsend("{U+3003}")	; 〃 Ditto mark
+{
+	if (DittoWithBars) {
+		fsend("{U+2015}")	; ― Horizontal Bar
+		fsend("{U+3003}")	; 〃 Ditto mark
+		fsend("{U+2015}")	; ― Horizontal Bar
+	} else {
+		fsend("{U+3003}")	; 〃 Ditto mark
+	}
 }
-return
 
 ^d::fsend("{U+00B7}")	; · Middle Dot
 
@@ -379,8 +365,8 @@ return
 !sc035::fsend("{U+00BF}")	; ¿ Inverted Question Mark
 ^sc035::fsend("{U+00A1}")	; ¡ Inverted Exclamation Mark
 
-^sc029::fsend("{U+00BA}")	; º Masculine Ordinal Indicator
-!sc029::fsend("{U+00AA}")	; ª Feminine Ordinal Indicator
+!sc029::fsend("{U+00BA}")	; º Masculine Ordinal Indicator Мужской порядковый индикатор
+^sc029::fsend("{U+00AA}")	; ª Feminine Ordinal Indicator Женский порядковый индикатор
 
 +sc029::fsend("{U+02BB}")	; ʻ Modifier Letter Turned Comma
 sc029::fsend("{U+02BC}")	; ʼ Modifier Letter Apostrophe
@@ -401,46 +387,47 @@ d::fsend("{Raw}[")
 f::fsend("{Raw}]")
 
 g::
-if (EmDashWithSpace) {
-	fsend("{U+202F}")	; Narrow No-Break Space
-	fsend("{U+2014}")	; — Em Dash
-	fsend("{U+2009}")	; Thin Space
-} else {
-	fsend("{U+2014}")	; — Em Dash
+{
+	if (EmDashWithSpace) {
+		fsend("{U+202F}")	; Narrow No-Break Space
+		fsend("{U+2014}")	; — Em Dash
+		fsend("{U+2009}")	; Thin Space
+	} else {
+		fsend("{U+2014}")	; — Em Dash
+	}
 }
-return
 
 ; ----------------------------------------------------------------
 ; Copy/Paste/Cut/Select_all/Undo
 ; ----------------------------------------------------------------
 
-+n::Send {Home}{Home}+{End}^c{Home}	; copy whole line
-+sc034::Send {Home}{Home}+{End}^x{Del}	; .>  cut whole line
-+sc035::Send {Home}{Home}+{End}^c{End}{Enter}^v	; duplicate current line
++n::Send "{Home}{Home}+{End}^c{Home}"	; copy whole line
++sc034::Send "{Home}{Home}+{End}^x{Del}"	; .>  cut whole line
++sc035::Send "{Home}{Home}+{End}^c{End}{Enter}^v"	; duplicate current line
 
-b:: Send ^a
-n:: Send ^c
-sc034:: Send ^x	; .>
-sc035:: Send ^v	; /?
-+z:: Send +^z
-z:: Send ^z
+b:: Send "^a"
+n:: Send "^c"
+sc034:: Send "^x"	; .>
+sc035:: Send "^v"	; /?
++z:: Send "+^z"
+z:: Send "^z"
 
 ; ----------------------------------------------------------------
 ; Multimedia keys
 ; ----------------------------------------------------------------
 
-<#x:: Send {Media_Play_Pause}
-<#!x:: Send {Media_Stop}
-<#c:: Send {Media_Prev}
-<#v:: Send {Media_Next}
-x:: Send {Volume_Mute}
-c:: Send {Volume_Down} 
-v:: Send {Volume_Up}
+<#x:: Send "{Media_Play_Pause}"
+<#!x:: Send "{Media_Stop}"
+<#c:: Send "{Media_Prev}"
+<#v:: Send "{Media_Next}"
+x:: Send "{Volume_Mute}"
+c:: Send "{Volume_Down}"
+v:: Send "{Volume_Up}"
 
-#If
+#HotIf
 
 
-#If EnterUnicode
+#HotIf EnterUnicode
 0::
 1::
 2::
@@ -473,15 +460,18 @@ l::
 u::
 i::
 o::
-	unicodesymbol := unicodesymbol . Unicode[A_ThisHotkey]
-return
-#If
+{
+	global unicodesymbol := unicodesymbol.Unicode[A_ThisHotkey]
+}
+#HotIf
+
+
 
 ; ----------------------------------------------------------------
 ; Spaces
 ; ----------------------------------------------------------------
 
-#If (not(GetKeyState("NumLock","T") and WithNumpad = false))
+#HotIf (not(GetKeyState("NumLock","T") and WithNumpad = false))
 
 ; No-Break Space
 <!Space::fsend("{U+00A0}")
@@ -501,7 +491,7 @@ return
 <^<#Space::fsend("{U+2008}")	; Punctuation Space
 <+<#Space::fsend("{U+205F}")	; Medium Mathematical Space
 
-#If
+#HotIf
 
 
 F23::!Tab
@@ -511,41 +501,43 @@ F23::!Tab
 ; ----------------------------------------------------------------
 
 F24::
+{
+	global GreekLayerLock
 	if GetKeyState("Shift", "P") {
 		if (GreekLayerLock = true) {
-			MsgBox, 64,,Greek Layer is Off, 1
+			MsgBox("Greek Layer is Off",, "64 T1")
 			GreekLayerLock := false
 		} else {
-			MsgBox, 64,,Greek Layer is On, 1
+			MsgBox("Greek Layer is On",, "64 T1")
 			GreekLayerLock := true
 		}
 	} else {
-		GreekLayer := true
+		global GreekLayer := true
 	}
-	SetCapsLockState Off
-return
+	SetCapsLockState "Off"
+}
 
 
 Space & CapsLock::
+{
+	global CyrillicLayerLock
 	if GetKeyState("Shift", "P") {
 		if (CyrillicLayerLock = true) {
-			MsgBox, 64,,Cyrillic Layer is Off, 1
+			MsgBox("Cyrillic Layer is Off",, "64 T1")
 			CyrillicLayerLock := false
 		} else {
-			MsgBox, 64,,Cyrillic Layer is On, 1
+			MsgBox("Cyrillic Layer is On",, "64 T1")
 			CyrillicLayerLock := true
 		}
 	} else {
-		CyrillicLayer := true
+		global CyrillicLayer := true
 	}
-	SetCapsLockState Off
-return
+	SetCapsLockState "Off"
+}
 
 
 ; Reload script
-^#r::
-Reload
-return
+^#r::Reload
 
 ; ----------------------------------------------------------------
 ; Attach additional files
@@ -560,7 +552,6 @@ return
 #Include Cyrillic_layer.ahk
 #Include ArrowLayer.ahk
 #Include Fonts.ahk
-;#Include Navless.ahk
 
 ; ----------------------------------------------------------------
 ; Hotstrings example

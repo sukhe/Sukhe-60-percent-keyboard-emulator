@@ -4,7 +4,7 @@
 	ArrowLayer := false
 }
 
-#If ((ArrowLayer or ArrowLayerLock) and (!GetKeyState("Space", "P")))
+#HotIf ((ArrowLayer or ArrowLayerLock) and (!GetKeyState("Space", "P")))
 
 +!1::farr("{U+2665}")	; ♥ Black Heart Suit
 +!2::farr("{U+2666}")	; ♦ Black Diamond Suit
@@ -252,4 +252,4 @@ t::farr("{U+1F697}")	; 🚗 Automobile
 ^sc035::farr("{U+2754}")	; ❔ White Question Mark Ornament
 sc035::farr("{U+2753}")	; ❓ Black Question Mark Ornament
 
-#If
+#HotIf
